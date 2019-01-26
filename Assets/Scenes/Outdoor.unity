@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowActive: 1
-  GlowColor: {r: 1, g: 0, b: 0.8931103, a: 0}
+  GlowColor: {r: 1, g: 0, b: 0.9975276, a: 0}
   LerpFactor: 10
   icon: {fileID: 21300000, guid: 5916a32993eea9741bcd42c0d3624145, type: 3}
 --- !u!1 &141240248
@@ -266,14 +266,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a0e4831621175184dbcf0d9541dfa07a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43e1156734861d6448d8935e2d047cdd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1383,6 +1383,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114936839805576610, guid: e4bac1fe88801ea4dabaff1072936361,
+        type: 2}
+      propertyPath: GlowColor.g
+      value: 0.9982565
+      objectReference: {fileID: 0}
+    - target: {fileID: 114936839805576610, guid: e4bac1fe88801ea4dabaff1072936361,
+        type: 2}
+      propertyPath: GlowColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4bac1fe88801ea4dabaff1072936361, type: 2}
   m_IsPrefabAsset: 0
@@ -1491,14 +1501,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a0e4831621175184dbcf0d9541dfa07a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43e1156734861d6448d8935e2d047cdd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2041,6 +2051,12 @@ Prefab:
       propertyPath: fadeOut
       value: 
       objectReference: {fileID: 500070393}
+    - target: {fileID: 114539539831199376, guid: 390dd9b3d8c0a4e4091eaef3b21184a9,
+        type: 2}
+      propertyPath: empty
+      value: 
+      objectReference: {fileID: 21300000, guid: 43e1156734861d6448d8935e2d047cdd,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390dd9b3d8c0a4e4091eaef3b21184a9, type: 2}
   m_IsPrefabAsset: 0
@@ -2071,8 +2087,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9de5d1701cabff48adf29a14f5e1d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anxietyBaseLevel: 0
   anxietyLevel: 0
+  currentScene: 
+  posX: 0
+  posY: 0
+  posZ: 0
   spawnOnBed: 1
+  dialog_empty: {fileID: 0}
 --- !u!4 &1139288561
 Transform:
   m_ObjectHideFlags: 0
@@ -2381,7 +2403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowActive: 1
-  GlowColor: {r: 1, g: 0, b: 0.8931103, a: 0}
+  GlowColor: {r: 0, g: 0.9663601, b: 1, a: 0}
   LerpFactor: 10
   icon: {fileID: 21300000, guid: 080412ce50d0aea40b3861b3c139672e, type: 3}
 --- !u!1001 &1459206685
@@ -2619,14 +2641,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a0e4831621175184dbcf0d9541dfa07a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43e1156734861d6448d8935e2d047cdd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
