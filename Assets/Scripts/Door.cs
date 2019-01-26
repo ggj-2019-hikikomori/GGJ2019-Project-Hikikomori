@@ -9,7 +9,7 @@ public class Door : MonoBehaviour
 
 	private void OnTriggerStay(Collider other)
 	{
-		if (other.CompareTag("Player") && (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Joystick1Button0)))
+		if (other.CompareTag("Player") && GameManager.ActionButton())
 		{
 			GameManager.instance.anxietyLevel = other.GetComponent<AnxietyManager>().anxietyLevel;
 			if (inside)

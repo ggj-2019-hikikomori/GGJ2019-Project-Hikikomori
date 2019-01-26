@@ -17,4 +17,10 @@ public class GameManager : MonoBehaviour
 
 		DontDestroyOnLoad(this);
 	}
+
+
+    public static bool ActionButton()
+    {
+        return Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Joystick1Button0);
+    }
 }
