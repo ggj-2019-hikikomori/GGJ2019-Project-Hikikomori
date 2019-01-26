@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
 		Vector3 velocity = new Vector3(x, 0.0f, z).normalized * speed * Time.fixedDeltaTime;
 
+		transform.LookAt(transform.position + velocity);
 		rb.MovePosition(transform.position + velocity);
 	}
 }
