@@ -35,6 +35,8 @@ public class DialogWithPlayer : MonoBehaviour {
             Debug.LogError("Error in dialog: missing dialog");
         }
 
+        player = GameObject.FindGameObjectWithTag("Player");
+
         dialogDisplay = transform.GetChild(0).gameObject;
         dialogDisplayText = dialogDisplay.GetComponent<TextMeshPro>();
 
@@ -72,8 +74,8 @@ public class DialogWithPlayer : MonoBehaviour {
 
                 StartCoroutine(CoroutinePartialText());
             }
-            Placing();
         }
+        Placing();
     }
 
     private void OnTriggerExit(Collider other)
@@ -141,12 +143,13 @@ public class DialogWithPlayer : MonoBehaviour {
     {
         if(dialogSteps[currentStep].player)
         {
-            refRectTransform.position = originalPositionRectTransform;
-            refRectTransform.rotation = originalRotationRectTransform;
+            refRectTransform.position = new Vector3(player.transform.position.x, originalPositionRectTransform.y, player.transform.position.z);
+            
         }
         else
         {
-
+            refRectTransform.position = originalPositionRectTransform;
+            refRectTransform.rotation = originalRotationRectTransform;
         }
     }
 

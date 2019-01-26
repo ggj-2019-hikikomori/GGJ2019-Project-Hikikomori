@@ -99,8 +99,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 2, z: 4}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 6, y: 6, z: 4}
+  m_Center: {x: 0, y: -3, z: 0}
 --- !u!114 &114003076931903580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displaySpeedInverse: 0.002
   dialogSteps:
-  - text: Do you really want to go outside?
+  - text: Do I really want to go outside?
     feeling: 2
     player: 1
     internalThoughts: 1
@@ -123,18 +123,25 @@ MonoBehaviour:
     next: 1
   - text: Well...
     feeling: 0
-    player: 0
+    player: 1
     internalThoughts: 0
     sound: {fileID: 0}
     delayBeforeDisplay: 0.5
     next: 2
-  - text: 
+  - text: Are you ok?
     feeling: 0
     player: 0
     internalThoughts: 0
     sound: {fileID: 0}
     delayBeforeDisplay: 0
-    next: 2
+    next: 3
+  - text: ' '
+    feeling: 0
+    player: 0
+    internalThoughts: 0
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    next: 3
 --- !u!114 &114852459698739632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,7 +278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.29, y: 0}
+  m_AnchoredPosition: {x: 8.29, y: 5.85}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224800396703755914
@@ -287,8 +294,8 @@ RectTransform:
   m_Father: {fileID: 224017699198546190}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 70, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.2900009, y: 4.549999}
-  m_SizeDelta: {x: -180, y: -45}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
