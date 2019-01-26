@@ -13,6 +13,7 @@ public class AnxietyManager : MonoBehaviour
 
 	private void Start()
 	{
+		anxietyLevel = GameManager.instance.anxietyLevel;
 		updatePostProcessingProfile();
 	}
 

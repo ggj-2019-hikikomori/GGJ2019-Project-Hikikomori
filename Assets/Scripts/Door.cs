@@ -11,6 +11,7 @@ public class Door : MonoBehaviour
 	{
 		if (other.CompareTag("Player") && Input.GetKey(KeyCode.F))
 		{
+			GameManager.instance.anxietyLevel = other.GetComponent<AnxietyManager>().anxietyLevel;
 			if (inside)
 				SceneManager.LoadScene(1);
 			else
