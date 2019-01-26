@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 17e433efa6aab894fa62163f4837be91
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: block_16
+    100002: block_17
+    100004: block_18
+    100006: block_21
+    100008: block_columns_15
+    100010: door_low_29
+    100012: door_rounded_wide_26
+    100014: //RootNode
+    100016: roof_24
+    100018: roof_25
+    100020: roof_corner_23
+    100022: window_31
+    100024: window_detail_27
+    100026: window_double_30
+    100028: window_round_detail_32
+    400000: block_16
+    400002: block_17
+    400004: block_18
+    400006: block_21
+    400008: block_columns_15
+    400010: door_low_29
+    400012: door_rounded_wide_26
+    400014: //RootNode
+    400016: roof_24
+    400018: roof_25
+    400020: roof_corner_23
+    400022: window_31
+    400024: window_detail_27
+    400026: window_double_30
+    400028: window_round_detail_32
+    2100000: element
+    2100002: glass
+    2100004: bricks
+    2300000: block_16
+    2300002: block_17
+    2300004: block_18
+    2300006: block_21
+    2300008: block_columns_15
+    2300010: door_low_29
+    2300012: door_rounded_wide_26
+    2300014: roof_24
+    2300016: roof_25
+    2300018: roof_corner_23
+    2300020: window_31
+    2300022: window_detail_27
+    2300024: window_double_30
+    2300026: window_round_detail_32
+    3300000: block_16
+    3300002: block_17
+    3300004: block_18
+    3300006: block_21
+    3300008: block_columns_15
+    3300010: door_low_29
+    3300012: door_rounded_wide_26
+    3300014: roof_24
+    3300016: roof_25
+    3300018: roof_corner_23
+    3300020: window_31
+    3300022: window_detail_27
+    3300024: window_double_30
+    3300026: window_round_detail_32
+    4300000: block_columns_15
+    4300002: block_16
+    4300004: block_17
+    4300006: block_18
+    4300008: block_21
+    4300010: roof_corner_23
+    4300012: roof_24
+    4300014: roof_25
+    4300016: door_rounded_wide_26
+    4300018: window_detail_27
+    4300020: door_low_29
+    4300022: window_double_30
+    4300024: window_31
+    4300026: window_round_detail_32
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
