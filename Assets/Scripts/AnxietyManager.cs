@@ -69,6 +69,6 @@ public class AnxietyManager : MonoBehaviour
 		yield return new WaitUntil(() => fadeOut.isPlaying == false);
 		GameManager.instance.anxietyLevel = 99.9f;
 		GameManager.instance.spawnOnBed = true;
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(1);
 	}
 }
