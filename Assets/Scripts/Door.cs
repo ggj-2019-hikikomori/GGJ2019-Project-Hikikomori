@@ -7,9 +7,16 @@ public class Door : MonoBehaviour
 {
 	public bool inside;
 
-	private void OnTriggerStay(Collider other)
+    private bool flagActionInput; 
+
+    private void Update()
+    {
+        flagActionInput = GameManager.ActionButton();
+    }
+
+    private void OnTriggerStay(Collider other)
 	{
-		if (other.CompareTag("Player") && GameManager.ActionButton())
+		if (other.CompareTag("Player") && flagActionInput)
 		{
 			GameManager.instance.anxietyLevel = other.GetComponent<AnxietyManager>().anxietyLevel;
 			if (inside)
@@ -22,5 +29,5 @@ public class Door : MonoBehaviour
 				SceneManager.LoadScene(1);
 			}
 		}
-	}
+    }
 }
