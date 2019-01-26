@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogHouseSetup : MonoBehaviour {
 
-    public DialogWithPlayer goingOutside;
+    public DialogProcessor goingOutside;
 
 	void Start () {
         if (!GameManager.instance.spawnOnBed)

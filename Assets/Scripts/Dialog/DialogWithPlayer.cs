@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class DialogWithPlayer : MonoBehaviour {
 
     [Range(0.001f, 0.02f)]
@@ -176,26 +176,4 @@ public class DialogWithPlayer : MonoBehaviour {
             yield return new WaitForSeconds(displaySpeedInverse);
         }
     }
-}
-
-[System.Serializable]
-public struct DialogStep
-{
-    public string text;
-    public DiaglogFeeling feeling;
-    public bool player;
-    public bool internalThoughts;
-
-    public GameObject sound;
-    public float delayBeforeDisplay;
-
-    public int next;
-}
-
-[System.Serializable]
-public enum DiaglogFeeling
-{
-    Neutral,
-    Good,
-    Bad
-}
+}*/
