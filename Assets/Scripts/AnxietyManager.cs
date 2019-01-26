@@ -18,7 +18,7 @@ public class AnxietyManager : MonoBehaviour
 	private void Start()
 	{
 		anxietyLevel = GameManager.instance.anxietyLevel;
-		updatePostProcessingProfile();
+		UpdatePostProcessingProfile();
 	}
 
 	void Update()
@@ -33,14 +33,14 @@ public class AnxietyManager : MonoBehaviour
 		if(anxietyLevel != lastAnxietyLevel)
 		{
 			lastAnxietyLevel = anxietyLevel;
-			updatePostProcessingProfile();
+			UpdatePostProcessingProfile();
 		}
 
 		if (anxietyLevel >= 100.0f && !isRespawning)
 			StartCoroutine(RespawnCoroutine());
 	}
 	
-	void updatePostProcessingProfile()
+	void UpdatePostProcessingProfile()
 	{
 		ColorGradingModel.Settings colorGradingSettings = profile.colorGrading.settings;
 		colorGradingSettings.basic.saturation = (100 - anxietyLevel) / 100.0f;
