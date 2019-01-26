@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4878408922755644}
   - component: {fileID: 119568580095214280}
+  - component: {fileID: 114264298764717180}
   m_Layer: 0
   m_Name: AnxietyProjector
   m_TagString: Untagged
@@ -34,12 +35,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1477807539712350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.2, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114264298764717180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477807539712350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bcc2093469485f4c87af28ccc2f5d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emptyPosition: -2.6
+  fullPosition: 0.3
 --- !u!119 &119568580095214280
 Projector:
   m_ObjectHideFlags: 1
@@ -49,7 +63,7 @@ Projector:
   m_Enabled: 1
   serializedVersion: 2
   m_NearClipPlane: 0.1
-  m_FarClipPlane: 20
+  m_FarClipPlane: 10
   m_FieldOfView: 60
   m_AspectRatio: 1
   m_Orthographic: 1
