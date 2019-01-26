@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
 	#region Story Advancement
 	public bool spawnOnBed = true;
+
+	private Dictionary<string, int> storyVariables;
 	#endregion
 
 	private void Awake()
@@ -30,9 +32,18 @@ public class GameManager : MonoBehaviour
 		DontDestroyOnLoad(this);
 	}
 
-
     public static bool ActionButton()
     {
         return Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Joystick1Button0);
     }
+
+	public static void SetVariable(string key, int value)
+	{
+		instance.storyVariables[key] = value;
+	}
+
+	public static int GetVariable(string key)
+	{
+		return instance.storyVariables[key];
+	}
 }
