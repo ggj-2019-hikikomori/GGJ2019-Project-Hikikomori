@@ -20,10 +20,12 @@ public class GameManager : MonoBehaviour
 	public bool spawnOnBed = true;
 
 	private Dictionary<string, int> storyVariables;
+	public Dialog dialog_empty;
 	#endregion
 
 	private void Awake()
 	{
+		storyVariables = new Dictionary<string, int>();
 		if (instance == null)
 			instance = this;
 		else if (instance != this)
@@ -44,6 +46,14 @@ public class GameManager : MonoBehaviour
 
 	public static int GetVariable(string key)
 	{
-		return instance.storyVariables[key];
+		if (instance.storyVariables.ContainsKey(key))
+		{
+			return instance.storyVariables[key];
+		}
+		else
+		{
+			return 0;
+		}
+
 	}
 }

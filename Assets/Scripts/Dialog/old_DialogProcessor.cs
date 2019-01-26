@@ -176,4 +176,5 @@ public class DialogWithPlayer : MonoBehaviour {
             yield return new WaitForSeconds(displaySpeedInverse);
         }
     }
-}*/
+}
+*/
