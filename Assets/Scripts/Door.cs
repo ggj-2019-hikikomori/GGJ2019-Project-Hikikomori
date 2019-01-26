@@ -14,12 +14,12 @@ public class Door : MonoBehaviour
 			GameManager.instance.anxietyLevel = other.GetComponent<AnxietyManager>().anxietyLevel;
 			if (inside)
 			{
-				SceneManager.LoadScene(1);
+				SceneManager.LoadScene(2);
 			}
 			else
 			{
 				GameManager.instance.spawnOnBed = false;
-				SceneManager.LoadScene(0);
+				SceneManager.LoadScene(1);
 			}
 		}
 	}
