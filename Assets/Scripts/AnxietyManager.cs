@@ -64,11 +64,13 @@ public class AnxietyManager : MonoBehaviour
 
 	IEnumerator RespawnCoroutine()
 	{
+		GetComponent<PlayerController>().isPaused = true;
 		isRespawning = true;
 		fadeOut.Play();
 		yield return new WaitUntil(() => fadeOut.isPlaying == false);
 		GameManager.instance.anxietyLevel = 99.9f;
 		GameManager.instance.spawnOnBed = true;
+		GetComponent<PlayerController>().isPaused = false;
 		SceneManager.LoadScene(1);
 	}
 }

@@ -20,15 +20,18 @@ public class PlayerController : MonoBehaviour
 	#endregion
 
 	Rigidbody rb;
-	Animator animator;
+	[HideInInspector]
+	public Animator animator;
 
 	float velocity;
+	public bool isPaused;
 
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
 		animator = GetComponent<Animator>();
 		movementInput = Vector3.zero;
+		isPaused = false;
 	}
 
 	void Update()
@@ -39,11 +42,16 @@ public class PlayerController : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		Vector3 velocity = movementInput * speed * Time.fixedDeltaTime;
-		this.velocity = velocity.magnitude;
+		if (!isPaused)
+		{
+			Vector3 velocity = movementInput * speed * Time.fixedDeltaTime;
+			this.velocity = velocity.magnitude;
 
-		transform.LookAt(transform.position + velocity);
-		rb.MovePosition(transform.position + velocity);
+			transform.LookAt(transform.position + velocity);
+			rb.MovePosition(transform.position + velocity);
+		}
+		else
+			velocity = 0.0f;
 	}
 
 	void UpdateAnimatorParameters()
