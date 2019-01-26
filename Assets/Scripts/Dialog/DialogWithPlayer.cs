@@ -91,7 +91,7 @@ public class DialogWithPlayer : MonoBehaviour {
 
     private IEnumerator CoroutinePartialText()
     {
-        while(currentChar < dialogSteps[currentStep].text.Length)
+        while(currentChar <= dialogSteps[currentStep].text.Length)
         {
             dialogDisplayText.text = PartialText();
             ++currentChar;
