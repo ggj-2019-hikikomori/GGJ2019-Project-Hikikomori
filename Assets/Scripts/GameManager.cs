@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
 	public float anxietyLevel = 0.0f;
 
+	public bool spawnOnBed = true;
+
 	private void Awake()
 	{
 		if (instance == null)

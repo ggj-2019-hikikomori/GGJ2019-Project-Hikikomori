@@ -253,7 +253,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7df69822281c1b04ca94ecd2bc77ac75, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7df69822281c1b04ca94ecd2bc77ac75, type: 3}
       propertyPath: m_LocalScale.x
@@ -270,6 +270,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7df69822281c1b04ca94ecd2bc77ac75, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &255014392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255014393}
+  m_Layer: 0
+  m_Name: BedSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &255014393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 255014392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7, y: 1, z: -6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2015359719}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &312440005
 Prefab:
   m_ObjectHideFlags: 0
@@ -307,7 +335,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fab4826647418aa4597873fcc9525d43, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fab4826647418aa4597873fcc9525d43, type: 3}
       propertyPath: m_LocalScale.x
@@ -390,7 +418,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3d949197ba8fbea40b9d5ff1c8cf87c0, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3d949197ba8fbea40b9d5ff1c8cf87c0, type: 3}
       propertyPath: m_LocalScale.y
@@ -535,7 +563,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f72ed9555d3d8a458e02d5ae7446da8, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f72ed9555d3d8a458e02d5ae7446da8, type: 3}
       propertyPath: m_LocalScale.x
@@ -589,7 +617,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cdb0d3679ff8197468dfe95b35f33445, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cdb0d3679ff8197468dfe95b35f33445, type: 3}
       propertyPath: m_LocalScale.x
@@ -1005,6 +1033,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 810d78769da44444aa58088101f91601,
     type: 3}
   m_PrefabInternal: {fileID: 1155624479}
+--- !u!1 &1251758753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251758754}
+  m_Layer: 0
+  m_Name: DoorSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1251758754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251758753}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.8, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2015359719}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1410868189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,6 +1278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anxietyLevel: 0
   profile: {fileID: 11400000, guid: 0dc485a569c624148b2e41b0dc078302, type: 2}
+  fadeOut: {fileID: 0}
 --- !u!114 &1589192371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,6 +1542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anxietyLevel: 0
+  spawnOnBed: 1
 --- !u!1 &1838285424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,3 +1844,48 @@ Transform:
   m_Father: {fileID: 621027869}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!1 &2015359717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2015359719}
+  - component: {fileID: 2015359718}
+  m_Layer: 0
+  m_Name: HouseSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2015359718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015359717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f7fa2e2985c324487b8d75962c66b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bedSpawn: {fileID: 255014393}
+  doorSpawn: {fileID: 1251758754}
+  player: {fileID: 1589192363}
+--- !u!4 &2015359719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015359717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 255014393}
+  - {fileID: 1251758754}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
