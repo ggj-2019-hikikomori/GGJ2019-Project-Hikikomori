@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class GlowObjectCmd : MonoBehaviour
 {
+	public bool glowActive;
 	public Color GlowColor;
 	public float LerpFactor = 10;
 
@@ -26,7 +27,7 @@ public class GlowObjectCmd : MonoBehaviour
 		GlowController.RegisterObject(this);
 	}
 
-	private void OnMouseEnter()
+	/*private void OnMouseEnter()
 	{
 		_targetColor = GlowColor;
 		enabled = true;
@@ -36,18 +37,29 @@ public class GlowObjectCmd : MonoBehaviour
 	{
 		_targetColor = Color.black;
 		enabled = true;
-	}
+	}*/
 
 	/// <summary>
 	/// Update color, disable self if we reach our target color.
 	/// </summary>
 	private void Update()
 	{
+		if (glowActive)
+		{
+			_targetColor = GlowColor;
+			enabled = true;
+		}
+		else
+		{
+			_targetColor = Color.black;
+			enabled = true;
+		}
+
 		_currentColor = Color.Lerp(_currentColor, _targetColor, Time.deltaTime * LerpFactor);
 
-		if (_currentColor.Equals(_targetColor))
+		/*if (_currentColor.Equals(_targetColor))
 		{
 			enabled = false;
-		}
+		}*/
 	}
 }
