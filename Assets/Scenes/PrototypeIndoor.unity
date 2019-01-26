@@ -333,9 +333,54 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1275310280853474, guid: 7c119d1cded18624190b00f9bf568abd, type: 2}
+      propertyPath: m_Name
+      value: Dialog Going out
+      objectReference: {fileID: 0}
+    - target: {fileID: 224800396703755914, guid: 7c119d1cded18624190b00f9bf568abd,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224800396703755914, guid: 7c119d1cded18624190b00f9bf568abd,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.5735764
+      objectReference: {fileID: 0}
+    - target: {fileID: 224800396703755914, guid: 7c119d1cded18624190b00f9bf568abd,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224800396703755914, guid: 7c119d1cded18624190b00f9bf568abd,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.8191521
+      objectReference: {fileID: 0}
+    - target: {fileID: 224800396703755914, guid: 7c119d1cded18624190b00f9bf568abd,
+        type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 224800396703755914, guid: 7c119d1cded18624190b00f9bf568abd,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -4.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 224800396703755914, guid: 7c119d1cded18624190b00f9bf568abd,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c119d1cded18624190b00f9bf568abd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &42367188 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114003076931903580, guid: 7c119d1cded18624190b00f9bf568abd,
+    type: 2}
+  m_PrefabInternal: {fileID: 42367187}
+  m_Script: {fileID: 11500000, guid: 3a98cda58aaaa6745afc6786b928e900, type: 3}
 --- !u!1001 &53989890
 Prefab:
   m_ObjectHideFlags: 0
@@ -2266,6 +2311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2015359719}
   - component: {fileID: 2015359718}
+  - component: {fileID: 2015359720}
   m_Layer: 0
   m_Name: HouseSpawner
   m_TagString: Untagged
@@ -2302,6 +2348,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2015359720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2015359717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84019085d010be947bd5cb80aaefb339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goingOutside: {fileID: 42367188}
 --- !u!4 &2019457766 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7df69822281c1b04ca94ecd2bc77ac75,
