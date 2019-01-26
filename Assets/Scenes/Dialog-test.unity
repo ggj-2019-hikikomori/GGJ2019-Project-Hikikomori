@@ -1089,24 +1089,6 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1275310280853474, guid: 7c119d1cded18624190b00f9bf568abd, type: 2}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522993229764042, guid: 7c119d1cded18624190b00f9bf568abd, type: 2}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 65694178142007870, guid: 7c119d1cded18624190b00f9bf568abd,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 65694178142007870, guid: 7c119d1cded18624190b00f9bf568abd,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c119d1cded18624190b00f9bf568abd, type: 2}
   m_IsPrefabAsset: 0
