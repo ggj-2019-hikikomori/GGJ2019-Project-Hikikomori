@@ -6,16 +6,21 @@ using UnityEngine.UI;
 
 public class DialogWithPlayer : MonoBehaviour {
 
+    [Range(0.001f, 0.02f)]
+    public float displaySpeedInverse;
+
     [SerializeField]
     public List<DialogStep> dialogSteps = new List<DialogStep>();
 
-    [Range(0.01f, 0.05f)]
-    public float displayWait;
-
     private int currentStep;
+    private int currentChar;
     private GameObject dialogDisplay;
     private TextMeshPro dialogDisplayText;
-    private int currentChar;
+    private RectTransform refRectTransform;
+    private Vector3 originalPositionRectTransform;
+    private Quaternion originalRotationRectTransform;
+
+    private GameObject player;
 
 	void Start () {
         if (transform.childCount != 1)
@@ -30,6 +35,10 @@ public class DialogWithPlayer : MonoBehaviour {
 
         dialogDisplay = transform.GetChild(0).gameObject;
         dialogDisplayText = dialogDisplay.GetComponent<TextMeshPro>();
+
+        refRectTransform = dialogDisplayText.GetComponent<RectTransform>();
+        originalPositionRectTransform = refRectTransform.position;
+        originalRotationRectTransform = refRectTransform.rotation;
 
         DisableDisplay();
 	}
@@ -49,14 +58,19 @@ public class DialogWithPlayer : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && GameManager.ActionButton())
+        if (currentChar >= dialogSteps[currentStep].text.Length) 
         {
-            StopCoroutine(CoroutinePartialText());
-            currentStep = dialogSteps[currentStep].next;
-            currentChar = 0;
-            dialogDisplayText.text = PartialText();
+            if (other.CompareTag("Player") && GameManager.ActionButton())
+            {
+                StopCoroutine(CoroutinePartialText());
+                currentStep = dialogSteps[currentStep].next;
+                currentChar = 0;
+                dialogDisplayText.text = PartialText();
+                Formatting();
 
-            StartCoroutine(CoroutinePartialText());
+                StartCoroutine(CoroutinePartialText());
+            }
+            Placing();
         }
     }
 
@@ -71,7 +85,10 @@ public class DialogWithPlayer : MonoBehaviour {
     private void EnableDispay()
     {
         dialogDisplayText.enabled = true;
+        dialogDisplayText.text = "";
         StartCoroutine(CoroutinePartialText());
+        Formatting();
+        Placing();
     }
 
     private void DisableDisplay()
@@ -80,7 +97,7 @@ public class DialogWithPlayer : MonoBehaviour {
 
         currentStep = 0;
         currentChar = 0;
-        dialogDisplayText.text = dialogSteps[currentStep].text;
+        dialogDisplayText.text = "";
         dialogDisplayText.enabled = false;
     }
 
@@ -89,13 +106,56 @@ public class DialogWithPlayer : MonoBehaviour {
         return dialogSteps[currentStep].text.Substring(0, currentChar);
     }
 
+    private void Formatting()
+    {
+        if(dialogSteps[currentStep].player && dialogSteps[currentStep].internalThoughts)
+        {
+            dialogDisplayText.color = Color.white;
+            dialogDisplayText.fontStyle = FontStyles.Bold | FontStyles.Italic;
+            dialogDisplayText.outlineWidth = 0.08f;
+        }
+        else
+        {
+            dialogDisplayText.color = Color.white;
+            dialogDisplayText.fontStyle = FontStyles.Bold;
+            dialogDisplayText.outlineWidth = 0.2f;
+        }
+
+        switch(dialogSteps[currentStep].feeling)
+        {
+            case DiaglogFeeling.Neutral:
+                dialogDisplayText.outlineColor = Color.black;
+                break;
+            case DiaglogFeeling.Good:
+                dialogDisplayText.outlineColor = Color.green;
+                break;
+            case DiaglogFeeling.Bad:
+                dialogDisplayText.outlineColor = Color.red;
+                break;
+        }
+    }
+
+    private void Placing()
+    {
+        if(dialogSteps[currentStep].player)
+        {
+            refRectTransform.position = originalPositionRectTransform;
+            refRectTransform.rotation = originalRotationRectTransform;
+        }
+        else
+        {
+
+        }
+    }
+
     private IEnumerator CoroutinePartialText()
     {
-        while(currentChar <= dialogSteps[currentStep].text.Length)
+        yield return new WaitForSeconds(dialogSteps[currentStep].delayBeforeDisplay);
+        while(currentChar < dialogSteps[currentStep].text.Length)
         {
-            dialogDisplayText.text = PartialText();
             ++currentChar;
-            yield return new WaitForSeconds(displayWait);
+            dialogDisplayText.text = PartialText();
+            yield return new WaitForSeconds(displaySpeedInverse);
         }
     }
 }
@@ -104,5 +164,20 @@ public class DialogWithPlayer : MonoBehaviour {
 public struct DialogStep
 {
     public string text;
+    public DiaglogFeeling feeling;
+    public bool player;
+    public bool internalThoughts;
+
+    public GameObject sound;
+    public float delayBeforeDisplay;
+
     public int next;
+}
+
+[System.Serializable]
+public enum DiaglogFeeling
+{
+    Neutral,
+    Good,
+    Bad
 }
