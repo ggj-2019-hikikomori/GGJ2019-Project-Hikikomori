@@ -22,6 +22,8 @@ public class DialogWithPlayer : MonoBehaviour {
 
     private GameObject player;
 
+    private bool flagActionInput;
+
 	void Start () {
         if (transform.childCount != 1)
         {
@@ -45,7 +47,7 @@ public class DialogWithPlayer : MonoBehaviour {
 	
 
 	void Update () {
-
+        flagActionInput = GameManager.ActionButton();
 	}
 
     private void OnTriggerEnter(Collider other)
@@ -60,7 +62,7 @@ public class DialogWithPlayer : MonoBehaviour {
     {
         if (currentChar >= dialogSteps[currentStep].text.Length) 
         {
-            if (other.CompareTag("Player") && GameManager.ActionButton())
+            if (other.CompareTag("Player") && flagActionInput)
             {
                 StopCoroutine(CoroutinePartialText());
                 currentStep = dialogSteps[currentStep].next;
