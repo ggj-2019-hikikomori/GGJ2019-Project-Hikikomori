@@ -89,7 +89,7 @@ public class DialogProcessor : MonoBehaviour {
 
 	private void OnTriggerStay(Collider other)
 	{
-		if (currentChar >= currentDialog.dialogSteps[currentStep].text.Length)
+		if (currentChar >= GetDisplayText().Length)
 		{
 			if (other.CompareTag("Player") && flagActionInput)
 			{
@@ -148,7 +148,7 @@ public class DialogProcessor : MonoBehaviour {
 
 	private string PartialText()
 	{
-		return currentDialog.dialogSteps[currentStep].text.Substring(0, currentChar);
+		return GetDisplayText().Substring(0, currentChar);
 	}
 
 	private void Formatting()
@@ -200,11 +200,16 @@ public class DialogProcessor : MonoBehaviour {
 	private IEnumerator CoroutinePartialText()
 	{
 		yield return new WaitForSeconds(currentDialog.dialogSteps[currentStep].delayBeforeDisplay);
-		while (currentChar < currentDialog.dialogSteps[currentStep].text.Length)
+		while (currentChar < GetDisplayText().Length)
 		{
 			++currentChar;
 			dialogDisplayText.text = PartialText();
 			yield return new WaitForSeconds(currentDialog.displaySpeedInverse);
 		}
+	}
+
+	private string GetDisplayText()
+	{
+		return Localization.Translate("dialog." + currentDialog.dialogSteps[currentStep].text);
 	}
 }

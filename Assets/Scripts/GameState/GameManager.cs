@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 	private void Awake()
 	{
 		storyVariables = new Dictionary<string, int>();
+		Localization.LoadLanguage("fr_FR");
 		if (instance == null)
 			instance = this;
 		else if (instance != this)
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public static bool ActionButton()
     {
-        return Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Joystick1Button0);
+        return Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0);
     }
 
 	public static void SetVariable(string key, int value)

@@ -12,21 +12,13 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   displaySpeedInverse: 0
-  conditions:
-  - name: Etonnement_Papy_1
-    value: 0
+  conditions: []
   dialogSteps:
-  - text: Yo
+  - text: test
     feeling: 0
     player: 0
     internalThoughts: 0
     sound: {fileID: 0}
     delayBeforeDisplay: 0
-    variableUpdates:
-    - name: Etonnement_Papy_1
-      value: 1
-    - name: Etonnement_Papy_1
-      value: 1
-    - name: Etonnement_Papy_1
-      value: 1
+    variableUpdates: []
     next: -1
