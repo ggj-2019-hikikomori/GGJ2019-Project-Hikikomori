@@ -9,10 +9,13 @@ public class DialogWithPlayer : MonoBehaviour {
     [SerializeField]
     public List<DialogStep> dialogSteps = new List<DialogStep>();
 
+    [Range(0.01f, 0.05f)]
+    public float displayWait;
+
     private int currentStep;
     private GameObject dialogDisplay;
     private TextMeshPro dialogDisplayText;
-
+    private int currentChar;
 
 	void Start () {
         if (transform.childCount != 1)
@@ -33,7 +36,7 @@ public class DialogWithPlayer : MonoBehaviour {
 	
 
 	void Update () {
-		
+
 	}
 
     private void OnTriggerEnter(Collider other)
@@ -48,8 +51,12 @@ public class DialogWithPlayer : MonoBehaviour {
     {
         if (other.CompareTag("Player") && GameManager.ActionButton())
         {
+            StopCoroutine(CoroutinePartialText());
             currentStep = dialogSteps[currentStep].next;
-            dialogDisplayText.text = dialogSteps[currentStep].text;
+            currentChar = 0;
+            dialogDisplayText.text = PartialText();
+
+            StartCoroutine(CoroutinePartialText());
         }
     }
 
@@ -64,13 +71,32 @@ public class DialogWithPlayer : MonoBehaviour {
     private void EnableDispay()
     {
         dialogDisplayText.enabled = true;
+        StartCoroutine(CoroutinePartialText());
     }
 
     private void DisableDisplay()
     {
+        StopCoroutine(CoroutinePartialText());
+
         currentStep = 0;
+        currentChar = 0;
         dialogDisplayText.text = dialogSteps[currentStep].text;
         dialogDisplayText.enabled = false;
+    }
+
+    private string PartialText()
+    {
+        return dialogSteps[currentStep].text.Substring(0, currentChar);
+    }
+
+    private IEnumerator CoroutinePartialText()
+    {
+        while(currentChar < dialogSteps[currentStep].text.Length)
+        {
+            dialogDisplayText.text = PartialText();
+            ++currentChar;
+            yield return new WaitForSeconds(displayWait);
+        }
     }
 }
 
