@@ -110,7 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4718635483710040}
   m_Layer: 0
-  m_Name: Rig
+  m_Name: basic_rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1204,7 +1204,7 @@ Animator:
   m_GameObject: {fileID: 1714780398426186}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 45d480461bbdc704587e117329ce8e69, type: 3}
-  m_Controller: {fileID: 9100000, guid: f297797635a2b7445ad2ea55cec7353b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 412b86113ac7ae948904639ea976bd90, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1225,7 +1225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.5
-  animator: {fileID: 0}
 --- !u!114 &114736036659675074
 MonoBehaviour:
   m_ObjectHideFlags: 1
