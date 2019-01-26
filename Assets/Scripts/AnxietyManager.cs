@@ -40,14 +40,14 @@ public class AnxietyManager : MonoBehaviour
 
 		if (anxietyLevel >= 25.0f)
 		{
-			Camera.main.GetComponentInChildren<CameraFollow>().setShakingValue(Mathf.Lerp(0.0f, 0.2f, Mathf.InverseLerp(25.0f, 100.0f, anxietyLevel)));
+			Camera.main.GetComponentInChildren<CameraMain>().setShakingValue(Mathf.Lerp(0.0f, 0.2f, Mathf.InverseLerp(25.0f, 100.0f, anxietyLevel)));
 			GrainModel.Settings grainSettings = profile.grain.settings;
 			grainSettings.intensity = Mathf.Lerp(0.0f, 1.0f, Mathf.InverseLerp(25.0f, 100.0f, anxietyLevel));
 			profile.grain.settings = grainSettings;
 		}
 		else
 		{
-			Camera.main.GetComponentInChildren<CameraFollow>().setShakingValue(0.0f);
+			Camera.main.GetComponentInChildren<CameraMain>().setShakingValue(0.0f);
 			GrainModel.Settings grainSettings = profile.grain.settings;
 			grainSettings.intensity = 0.0f;
 			profile.grain.settings = grainSettings;

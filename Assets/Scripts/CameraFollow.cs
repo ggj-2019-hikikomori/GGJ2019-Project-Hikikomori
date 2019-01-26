@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class CameraFollow : CameraMain
 {
-	public Transform target;
-
 	public float smoothSpeed;
 	public Vector3 offset;
-
-	float shakingValue = 0.0f;
 
 	void FixedUpdate ()
 	{
@@ -21,10 +17,5 @@ public class CameraFollow : MonoBehaviour
 		transform.position = smoothedPosition + shakingOffset;
 
 		transform.LookAt(target);
-	}
-
-	public void setShakingValue(float value)
-	{
-		shakingValue = value;
 	}
 }
