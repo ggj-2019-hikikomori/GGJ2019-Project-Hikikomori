@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class AnxietyManager : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class AnxietyManager : MonoBehaviour
 	float lastAnxietyLevel;
 
 	public PostProcessingProfile profile;
+
+	public Animation fadeOut;
+	bool isRespawning;
 
 	private void Start()
 	{
@@ -31,6 +35,9 @@ public class AnxietyManager : MonoBehaviour
 			lastAnxietyLevel = anxietyLevel;
 			updatePostProcessingProfile();
 		}
+
+		if (anxietyLevel >= 100.0f && !isRespawning)
+			StartCoroutine(RespawnCoroutine());
 	}
 	
 	void updatePostProcessingProfile()
@@ -53,5 +60,15 @@ public class AnxietyManager : MonoBehaviour
 			grainSettings.intensity = 0.0f;
 			profile.grain.settings = grainSettings;
 		}
+	}
+
+	IEnumerator RespawnCoroutine()
+	{
+		isRespawning = true;
+		fadeOut.Play();
+		yield return new WaitUntil(() => fadeOut.isPlaying == false);
+		GameManager.instance.anxietyLevel = 99.9f;
+		GameManager.instance.spawnOnBed = true;
+		SceneManager.LoadScene(0);
 	}
 }
