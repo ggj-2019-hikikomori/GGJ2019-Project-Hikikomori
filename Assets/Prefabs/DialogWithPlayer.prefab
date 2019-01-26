@@ -116,9 +116,9 @@ MonoBehaviour:
   - text: Are you sure you want to go outside?
     next: 1
   - text: Well...
-    next: 0
-  - text: Not Well...
-    next: 0
+    next: 2
+  - text: 
+    next: 2
   displayWait: 0.02
 --- !u!114 &114852459698739632
 MonoBehaviour:
