@@ -23,6 +23,6 @@ public class GameManager : MonoBehaviour
 
     public static bool ActionButton()
     {
-        return Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Joystick1Button0);
+        return Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0);
     }
 }

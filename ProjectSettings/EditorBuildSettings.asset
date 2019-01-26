@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: f07803231b5505c49b95d02295e14908
   - enabled: 1
-    path: Assets/Scenes/PrototypeIndoor.unity
+    path: Assets/Scenes/House.unity
     guid: e30b0890d1f36ef4d9c975d5a7666935
   - enabled: 1
-    path: Assets/Scenes/PrototypeOutdoor.unity
+    path: Assets/Scenes/Outdoor.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
