@@ -18,9 +18,10 @@ public class DialogWithPlayer : MonoBehaviour {
     private TextMeshPro dialogDisplayText;
     private RectTransform refRectTransform;
     private Vector3 originalPositionRectTransform;
-    private Quaternion originalRotationRectTransform;
+    //private Quaternion originalRotationRectTransform;
 
     private GameObject player;
+    private GameObject camera;
 
     private bool flagActionInput;
 
@@ -36,13 +37,14 @@ public class DialogWithPlayer : MonoBehaviour {
         }
 
         player = GameObject.FindGameObjectWithTag("Player");
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
 
         dialogDisplay = transform.GetChild(0).gameObject;
         dialogDisplayText = dialogDisplay.GetComponent<TextMeshPro>();
 
         refRectTransform = dialogDisplayText.GetComponent<RectTransform>();
         originalPositionRectTransform = refRectTransform.position;
-        originalRotationRectTransform = refRectTransform.rotation;
+        //originalRotationRectTransform = refRectTransform.rotation;
 
         DisableDisplay();
 	}
@@ -116,7 +118,7 @@ public class DialogWithPlayer : MonoBehaviour {
         {
             dialogDisplayText.color = Color.white;
             dialogDisplayText.fontStyle = FontStyles.Bold | FontStyles.Italic;
-            dialogDisplayText.outlineWidth = 0.08f;
+            dialogDisplayText.outlineWidth = 0.2f;
         }
         else
         {
@@ -149,8 +151,9 @@ public class DialogWithPlayer : MonoBehaviour {
         else
         {
             refRectTransform.position = originalPositionRectTransform;
-            refRectTransform.rotation = originalRotationRectTransform;
         }
+        refRectTransform.rotation = Quaternion.identity;
+        refRectTransform.rotation *= Quaternion.FromToRotation(refRectTransform.forward, Vector3.ProjectOnPlane(camera.transform.forward, Vector3.up));
     }
 
     private IEnumerator CoroutinePartialText()
