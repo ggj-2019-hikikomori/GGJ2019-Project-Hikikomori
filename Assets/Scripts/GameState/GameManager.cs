@@ -6,9 +6,21 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager instance;
 
-	public float anxietyLevel = 0.0f;
+	#region Player Properties
+	public float anxietyBaseLevel;
+	public float anxietyLevel;
 
+	public string currentScene;
+	public float posX;
+	public float posY;
+	public float posZ;
+	#endregion
+
+	#region Story Advancement
 	public bool spawnOnBed = true;
+
+	private Dictionary<string, int> storyVariables;
+	#endregion
 
 	private void Awake()
 	{
@@ -20,9 +32,18 @@ public class GameManager : MonoBehaviour
 		DontDestroyOnLoad(this);
 	}
 
-
     public static bool ActionButton()
     {
         return Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Joystick1Button0);
     }
+
+	public static void SetVariable(string key, int value)
+	{
+		instance.storyVariables[key] = value;
+	}
+
+	public static int GetVariable(string key)
+	{
+		return instance.storyVariables[key];
+	}
 }
