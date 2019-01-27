@@ -93,7 +93,11 @@ public class DialogProcessor : MonoBehaviour {
 		if (other.CompareTag("Player"))
 		{
 			EnableDispay();
-			other.GetComponent<PlayerController>().isPaused = true;
+			if (currentDialog != GameManager.instance.dialog_empty)
+			{
+				other.GetComponent<PlayerController>().isPaused = true;
+			}
+
 		}
 	}
 
