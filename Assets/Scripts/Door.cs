@@ -21,7 +21,6 @@ public class Door : MonoBehaviour
 	{
 		if (other.CompareTag("Player") && flagActionInput)
 		{
-
 			if (inside)
 			{
 				StartCoroutine(LoadScene(2));

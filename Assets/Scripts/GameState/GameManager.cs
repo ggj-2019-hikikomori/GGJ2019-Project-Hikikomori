@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
 	public float posX;
 	public float posY;
 	public float posZ;
+
+	public Sprite item1;
+	public Sprite item2;
+	public Sprite item3;
 	#endregion
 
 	#region Story Advancement
