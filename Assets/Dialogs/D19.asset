@@ -39,7 +39,7 @@ MonoBehaviour:
     - name: dialog_19
       value: 1
     - name: anxietyResistance
-      value: 550
+      value: 90
     animation: 0
     choices: []
     next: -1
