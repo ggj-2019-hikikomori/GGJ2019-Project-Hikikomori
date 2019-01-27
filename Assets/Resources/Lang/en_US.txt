@@ -70,3 +70,21 @@ dialog.d19.step1=This place looks peaceful.
 
 dialog.d20.step0=Oh Kitty cat. What have you done?
 
+dialog.d21.step0=Hello !
+dialog.d21.step1=Oh uh, hello.
+dialog.d21.step2=Did you see a cat... uh, a white cat... wandering around?
+dialog.d21.step3=AH! So YOU are the owner of that blasted cat?
+dialog.d21.step4=!!!
+dialog.d21.step5=It devasted my bakery by spilling a big flour bag this morning!
+dialog.d21.step6=You have to pay for that scamp!
+dialog.d21.step7=Or I'll never tell you where it went.
+dialog.d21.step8=I needed this flour, get me one bag.
+dialog.d21.step9=And I may tell you everything.
+
+dialog.d22.step0=Damn... Kitty is really up to mischief.
+dialog.d22.step1=This man was very angry.
+dialog.d22.step2=I need to fix this so he tells me where Kitty went.
+
+dialog.d23.step0=I need some flour to fix Kitty's mistake.
+
+dialog.d24.step0=Go on! You almost got it.
