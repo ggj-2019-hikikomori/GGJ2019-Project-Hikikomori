@@ -5,6 +5,6 @@ using UnityEngine;
 public class AnxietyHeal : MonoBehaviour {
 	public void Update()
 	{
-		GameManager.instance.anxietyLevel -= 0.3f;
+		GameManager.instance.anxietyLevel -= 0.5f;
 	}
 }
