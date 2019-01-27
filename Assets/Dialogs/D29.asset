@@ -60,8 +60,8 @@ MonoBehaviour:
       value: 1
     - name: item_flour
       value: 1
-    - name: item_flour_big
-      value: 0
+    - name: item_flour_small
+      value: 1
     animation: 0
     choices: []
     next: -1
