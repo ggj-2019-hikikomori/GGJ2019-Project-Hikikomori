@@ -92,6 +92,7 @@ public class DialogProcessor : MonoBehaviour {
 	{
 		if (other.CompareTag("Player"))
 		{
+			currentDialog = GetDialog();
 			EnableDispay();
 			if (currentDialog != GameManager.instance.dialog_empty)
 			{

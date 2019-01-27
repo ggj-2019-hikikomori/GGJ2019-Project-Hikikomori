@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour
 	[System.Serializable]
 	public struct StoryVariable
 	{
+
+		public StoryVariable(string n, int v)
+		{
+			name = n;
+			value = v;
+		}
 		public string name;
 		public int value;
 	}

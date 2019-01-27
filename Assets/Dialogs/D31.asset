@@ -19,7 +19,7 @@ MonoBehaviour:
   - name: item_flour
     value: 1
   - name: dialog_31
-    value: 1
+    value: 0
   dialogSteps:
   - text: step0
     feeling: 0

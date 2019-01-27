@@ -10,6 +10,8 @@ public class PickManager : MonoBehaviour {
 	public PlayerController player;
 	public bool isPicking = false;
 
+	public Sprite jamSprite;
+
 	private void Start()
 	{
 		updateInventory();
@@ -49,6 +51,9 @@ public class PickManager : MonoBehaviour {
 		player.animator.SetTrigger("Pickup");
 		player.isPaused = true;
 		yield return new WaitForSeconds(1.0f);
+
+		if (pickedObj.GetComponent<PickableObject>().icon == jamSprite && jamSprite != null)
+			GameManager.SetVariable(new GameManager.StoryVariable("item_jam", 1));
 
 		SetSlot(pickedObj.GetComponent<PickableObject>().icon);
 

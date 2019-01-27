@@ -108,8 +108,8 @@ dialog.d28.step1=Thank you so much!
 dialog.d28.step2=Take these seeds as a thank you.
 
 dialog.d29.step0=So, which bag size will I take?
-dialog.d29.step0.accept=Big
-dialog.d29.step0.deny=Small
+dialog.d29.step0.big=Big
+dialog.d29.step0.small=Small
 dialog.d29.step1=The big one.
 dialog.d29.step2=The small one.
 
