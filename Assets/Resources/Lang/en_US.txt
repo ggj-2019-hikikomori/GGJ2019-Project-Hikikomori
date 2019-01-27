@@ -14,18 +14,17 @@ dialog.d06.step0=Oh no, I don't feel good at all.
 
 dialog.d07.step0=The world is so frightening, I'm never gonna make it...
 dialog.d07.step1=I...I don't know what to do...
+dialog.d07.step1.accept=Help Kitty
+dialog.d07.step1.deny=Stay
+dialog.d07.step2=Do I go now?
 dialog.d07.step2.accept=Help Kitty
 dialog.d07.step2.deny=Stay
-dialog.d07.step4.deny=
-
-dialog.d08.step0=Poor Kitty...
-dialog.d08.step1=No, I cannot leave her alone.
-dialog.d08.step2=She needs me... and I need her!
-
-dialog.d09.step0=She is coming back, I can wait until tomorrow.
-
-dialog.d10.step0=Yes, I will wait and search her tomorrow.
-dialog.d10.step1=Yes, let's do that.
+dialog.d07.step3=She is coming back, I can wait until tomorrow.
+dialog.d07.step4=Poor Kitty...
+dialog.d07.step5=No, I cannot leave her alone.
+dialog.d07.step6=She needs me... and I need her!
+dialog.d07.step7=I will wait and search for her tomorrow.
+dialog.d07.step8=Yes, let's do that.
 
 dialog.d11.step0=Oh! It's Kitty's favorite toy!
 

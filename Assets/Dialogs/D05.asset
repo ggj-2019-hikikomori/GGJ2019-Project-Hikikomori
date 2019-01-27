@@ -14,9 +14,9 @@ MonoBehaviour:
   unlocalizedName: d05
   displaySpeedInverse: 0
   conditions:
-  - name: dialog_d04
+  - name: dialog_04
     value: 1
-  - name: dialog_d05
+  - name: dialog_05
     value: 0
   dialogSteps:
   - text: step0

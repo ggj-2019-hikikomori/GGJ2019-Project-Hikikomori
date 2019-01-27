@@ -14,9 +14,9 @@ MonoBehaviour:
   unlocalizedName: d14
   displaySpeedInverse: 0
   conditions:
-  - name: dialog_d13
+  - name: dialog_13
     value: 1
-  - name: dialog_d14
+  - name: dialog_14
     value: 0
   dialogSteps:
   - text: step0
@@ -59,7 +59,9 @@ MonoBehaviour:
     internalThoughts: 1
     sound: {fileID: 0}
     delayBeforeDisplay: 0
-    variableUpdates: []
+    variableUpdates:
+    - name: dialog_14
+      value: 1
     animation: 0
     choices: []
     next: -1
@@ -79,7 +81,9 @@ MonoBehaviour:
     internalThoughts: 1
     sound: {fileID: 0}
     delayBeforeDisplay: 0
-    variableUpdates: []
+    variableUpdates:
+    - name: dialog_14
+      value: 1
     animation: 0
     choices: []
     next: -1

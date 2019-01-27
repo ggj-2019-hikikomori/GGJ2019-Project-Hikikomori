@@ -15,9 +15,9 @@ MonoBehaviour:
   displaySpeedInverse: 0
   conditions:
   - name: dialog_12
-    value: 0
-  - name: dialog_13
     value: 1
+  - name: dialog_13
+    value: 0
   dialogSteps:
   - text: step0
     feeling: 0
@@ -25,7 +25,9 @@ MonoBehaviour:
     internalThoughts: 0
     sound: {fileID: 0}
     delayBeforeDisplay: 0
-    variableUpdates: []
+    variableUpdates:
+    - name: anxietySet
+      value: 90
     animation: 1
     choices: []
     next: 1
@@ -36,10 +38,10 @@ MonoBehaviour:
     sound: {fileID: 0}
     delayBeforeDisplay: 0
     variableUpdates:
-    - name: anxietySet
-      value: 100
     - name: dialog_13
       value: 1
+    - name: anxietySet
+      value: 100
     animation: 0
     choices: []
     next: -1

@@ -14,9 +14,9 @@ MonoBehaviour:
   unlocalizedName: d07
   displaySpeedInverse: 0
   conditions:
-  - name: dialog_d06
+  - name: dialog_06
     value: 1
-  - name: dialog_d07
+  - name: dialog_07
     value: 0
   dialogSteps:
   - text: step0
@@ -39,11 +39,55 @@ MonoBehaviour:
     animation: 0
     choices:
     - name: accept
-      target: 2
+      target: 4
     - name: deny
       target: 3
-    next: 0
+    next: 4
   - text: step2
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 1
+    variableUpdates: []
+    animation: 0
+    choices:
+    - name: accept
+      target: 4
+    - name: deny
+      target: 7
+    next: 0
+  - text: step3
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices: []
+    next: 2
+  - text: step4
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices: []
+    next: 5
+  - text: step5
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices: []
+    next: 6
+  - text: step6
     feeling: 0
     player: 1
     internalThoughts: 1
@@ -55,45 +99,19 @@ MonoBehaviour:
     animation: 0
     choices: []
     next: -1
-  - text: step3
+  - text: step7
     feeling: 0
     player: 1
     internalThoughts: 1
     sound: {fileID: 0}
     delayBeforeDisplay: 0
-    variableUpdates: []
-    animation: 0
-    choices:
-    - name: accept
-      target: 2
-    - name: deny
-      target: 4
-    next: 4
-  - text: step4
-    feeling: 0
-    player: 1
-    internalThoughts: 1
-    sound: {fileID: 0}
-    delayBeforeDisplay: 0
-    variableUpdates: []
-    animation: 0
-    choices:
-    - name: accept
-      target: 2
-    - name: deny
-      target: 5
-    next: 0
-  - text: step5
-    feeling: 0
-    player: 1
-    internalThoughts: 1
-    sound: {fileID: 0}
-    delayBeforeDisplay: 0
-    variableUpdates: []
+    variableUpdates:
+    - name: dialog_07
+      value: 1
     animation: 0
     choices: []
-    next: 6
-  - text: step5
+    next: 8
+  - text: step8
     feeling: 0
     player: 1
     internalThoughts: 1
