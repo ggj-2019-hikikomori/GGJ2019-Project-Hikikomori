@@ -9,7 +9,7 @@ public class CitySpawn : MonoBehaviour
 	public Transform bakerySpawn;
 	public Transform grocerySpawn;
 
-	GameObject Player;
+	public GameObject Player;
 	
 	void Start ()
 	{
