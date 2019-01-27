@@ -11,7 +11,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0fc4c4a767dd104cae59aa425444ee2, type: 3}
   m_Name: D40
   m_EditorClassIdentifier: 
-  unlocalizedName: 
+  unlocalizedName: d40
   displaySpeedInverse: 0
-  conditions: []
-  dialogSteps: []
+  conditions:
+  - name: bakery_end
+    value: 1
+  - name: dialog_40
+    value: 0
+  dialogSteps:
+  - text: step0
+    feeling: 0
+    player: 1
+    internalThoughts: 0
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices: []
+    next: 1
+  - text: step1
+    feeling: 0
+    player: 1
+    internalThoughts: 0
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices: []
+    next: 2
+  - text: step2
+    feeling: 0
+    player: 1
+    internalThoughts: 0
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates:
+    - name: dialog_40
+      value: 1
+    - name: end
+      value: 1
+    animation: 0
+    choices: []
+    next: -1

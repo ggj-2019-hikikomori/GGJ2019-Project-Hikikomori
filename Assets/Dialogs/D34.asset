@@ -54,6 +54,6 @@ MonoBehaviour:
       value: 1
     - name: item_baguette
       value: 1
-    animation: 1
+    animation: 2
     choices: []
     next: -1

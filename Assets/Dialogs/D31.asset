@@ -28,7 +28,7 @@ MonoBehaviour:
     sound: {fileID: 0}
     delayBeforeDisplay: 0
     variableUpdates: []
-    animation: 0
+    animation: 2
     choices: []
     next: 1
   - text: step1
