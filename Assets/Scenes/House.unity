@@ -1366,7 +1366,7 @@ Prefab:
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: dialogs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -1553,7 +1553,7 @@ Prefab:
         type: 2}
       propertyPath: dialogs.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 777f5aa397b608a4cb6d4c0c972849fe,
+      objectReference: {fileID: 11400000, guid: a071808df405dbe4b83937a181334bec,
         type: 2}
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
