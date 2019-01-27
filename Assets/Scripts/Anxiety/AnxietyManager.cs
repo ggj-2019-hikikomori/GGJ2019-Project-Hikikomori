@@ -15,15 +15,21 @@ public class AnxietyManager : MonoBehaviour
 
 	private void Start()
 	{
+		lastAnxietyLevel = GameManager.instance.anxietyLevel;
 		UpdatePostProcessingProfile();
 	}
 
 	void Update()
 	{
+		if (!GameManager.instance.isHealing)
+			GameManager.instance.anxietyLevel += GameManager.instance.anxietyPerSec * Time.deltaTime;
+		else
+			GameManager.instance.anxietyLevel -= 0.5f;
+
 		if (Input.GetKey(KeyCode.Keypad0))
-			GameManager.instance.anxietyLevel -= 0.2f;
+			GameManager.instance.anxietyLevel -= 1f;
 		else if (Input.GetKey(KeyCode.Keypad1))
-			GameManager.instance.anxietyLevel += 0.2f;
+			GameManager.instance.anxietyLevel += 1f;
 
 		GameManager.instance.anxietyLevel = Mathf.Clamp(GameManager.instance.anxietyLevel, 0.0f, 100.0f);
 
@@ -67,6 +73,7 @@ public class AnxietyManager : MonoBehaviour
 		yield return new WaitUntil(() => fadeOut.isPlaying == false);
 		GameManager.instance.anxietyLevel = 99.9f;
 		GameManager.instance.spawnOnBed = true;
+		GameManager.instance.isHealing = true;
 		GetComponent<PlayerController>().isPaused = false;
 		SceneManager.LoadScene(1);
 	}

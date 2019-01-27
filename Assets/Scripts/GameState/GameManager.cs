@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 	#region Player Properties
 	public float anxietyBaseLevel;
 	public float anxietyLevel;
+	public float anxietyPerSec;
+	public bool isHealing;
 
 	public string currentScene;
 	public float posX;

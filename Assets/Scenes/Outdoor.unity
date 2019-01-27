@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1055698290}
   smoothSpeed: 0.125
-  offset: {x: -5, y: 15, z: -10}
+  offset: {x: -2.5, y: 10, z: -8}
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1982,6 +1982,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anxietyBaseLevel: 0
   anxietyLevel: 0
+  anxietyPerSec: 0
+  isHealing: 0
   currentScene: 
   posX: 0
   posY: 0
