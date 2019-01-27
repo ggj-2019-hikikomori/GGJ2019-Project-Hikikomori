@@ -11,14 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0fc4c4a767dd104cae59aa425444ee2, type: 3}
   m_Name: EmptyDialog
   m_EditorClassIdentifier: 
+  unlocalizedName: empty
   displaySpeedInverse: 0
   conditions: []
   dialogSteps:
-  - text: 
+  - text: nothing
     feeling: 0
     player: 0
     internalThoughts: 0
     sound: {fileID: 0}
     delayBeforeDisplay: 0
     variableUpdates: []
-    next: -1
+    animation: 0
+    choices: []
+    next: 0

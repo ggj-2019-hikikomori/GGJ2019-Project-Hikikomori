@@ -1,1 +1,5 @@
-dialog.test=Hello my friend !
+dialog.empty.nothing=
+
+dialog.example.intro=Hey ! Psss..
+dialog.example.question=Do you want some good sprite sa mere ?
+dialog.example.accepted=Hehe, u real ni[b][b]a !

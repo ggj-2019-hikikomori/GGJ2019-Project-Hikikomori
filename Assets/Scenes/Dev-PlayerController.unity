@@ -1369,6 +1369,11 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 4a9eeebdf8757744ea287caebcf62642,
         type: 2}
+    - target: {fileID: 23728138404867548, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b590e6fbac865941b1b1d4cf5a46846, type: 2}
   m_IsPrefabAsset: 0
@@ -2275,6 +2280,16 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23728138404867548, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1078926897}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b590e6fbac865941b1b1d4cf5a46846, type: 2}
   m_IsPrefabAsset: 0
@@ -2283,6 +2298,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
     type: 2}
   m_PrefabInternal: {fileID: 1006926917}
+--- !u!95 &1078926897 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95655730875490988, guid: 1d35796d1b7d3ea4086b454c0e3e1e3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 802768110}
 --- !u!1 &1139288559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,6 +2338,11 @@ MonoBehaviour:
   posZ: 0
   spawnOnBed: 1
   dialog_empty: {fileID: 11400000, guid: e9220f0b22cb2af43b5922a375890409, type: 2}
+  variableUpdateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: GameManager+StoryVariableEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &1139288561
 Transform:
   m_ObjectHideFlags: 0

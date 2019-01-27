@@ -16,7 +16,8 @@ public class DialogCustomEditor : Editor {
 	public enum ListType
 	{
 		DialogStep,
-		StoryVariable
+		StoryVariable,
+		Choice
 	}
 
 	private void OnEnable()
@@ -27,7 +28,8 @@ public class DialogCustomEditor : Editor {
 	{
 
 		serializedObject.Update();
-		EditorGUILayout.FloatField("Display Speed Inverse", serializedObject.FindProperty("displaySpeedInverse").floatValue);
+		serializedObject.FindProperty("unlocalizedName").stringValue = EditorGUILayout.TextField("Unlocalized Name", serializedObject.FindProperty("unlocalizedName").stringValue);
+		serializedObject.FindProperty("displaySpeedInverse").floatValue = EditorGUILayout.FloatField("Display Speed Inverse", serializedObject.FindProperty("displaySpeedInverse").floatValue);
 		ShowElements("Conditions", serializedObject.FindProperty("conditions"), ListType.StoryVariable);
 		ShowElements("Dialog Steps", serializedObject.FindProperty("dialogSteps"), ListType.DialogStep);
 
@@ -40,6 +42,7 @@ public class DialogCustomEditor : Editor {
 		list.isExpanded = EditorGUILayout.Foldout(list.isExpanded, category, true);
 		if (list.isExpanded)
 		{
+
 			if (list.arraySize == 0)
 			{
 				if (GUILayout.Button(duplicateButtonContent))
@@ -50,36 +53,60 @@ public class DialogCustomEditor : Editor {
 			for (int i = 0; i < list.arraySize; i++)
 			{
 				EditorGUI.indentLevel++;
+				EditorGUILayout.BeginHorizontal();
+				GUILayout.Space(EditorGUI.indentLevel * 20);
+				GUILayout.BeginVertical(EditorStyles.helpBox);
 				if (type == ListType.DialogStep)
 				{
-					DialogStepFied(list.GetArrayElementAtIndex(i));
+					DialogStepFied(list.GetArrayElementAtIndex(i), i);
 				}
 				else if (type == ListType.StoryVariable)
 				{
 					StoryVariableField(list.GetArrayElementAtIndex(i));
 				}
+				else if (type == ListType.Choice)
+				{
+					ChoiceField(list.GetArrayElementAtIndex(i));
+				}
 				ShowButtons(list, i);
-				EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+				GUILayout.EndVertical();
+				EditorGUILayout.EndHorizontal();
 				EditorGUI.indentLevel--;
 			}
+
 		}
 
 	}
 
-	private static void DialogStepFied(SerializedProperty dialogStep)
+	private static void DialogStepFied(SerializedProperty dialogStep, int index)
 	{
-		dialogStep.FindPropertyRelative("text").stringValue = EditorGUILayout.TextField("Text", dialogStep.FindPropertyRelative("text").stringValue);
-		dialogStep.FindPropertyRelative("player").boolValue = EditorGUILayout.Toggle("Player", dialogStep.FindPropertyRelative("player").boolValue);
-		dialogStep.FindPropertyRelative("internalThoughts").boolValue = EditorGUILayout.Toggle("Internal Thoughts", dialogStep.FindPropertyRelative("internalThoughts").boolValue);
-		dialogStep.FindPropertyRelative("delayBeforeDisplay").floatValue = EditorGUILayout.FloatField("Delay Before Display", dialogStep.FindPropertyRelative("delayBeforeDisplay").floatValue);
-		dialogStep.FindPropertyRelative("next").intValue = EditorGUILayout.IntField("Next Step", dialogStep.FindPropertyRelative("next").intValue);
-		ShowElements("Variable Updates", dialogStep.FindPropertyRelative("variableUpdates"), ListType.StoryVariable);
+		dialogStep.isExpanded = EditorGUILayout.Foldout(dialogStep.isExpanded, "Dialog Step (" + index + ")", true);
+		if (dialogStep.isExpanded)
+		{
+			dialogStep.FindPropertyRelative("text").stringValue = EditorGUILayout.TextField("Text", dialogStep.FindPropertyRelative("text").stringValue);
+			dialogStep.FindPropertyRelative("player").boolValue = EditorGUILayout.Toggle("Player", dialogStep.FindPropertyRelative("player").boolValue);
+			dialogStep.FindPropertyRelative("internalThoughts").boolValue = EditorGUILayout.Toggle("Internal Thoughts", dialogStep.FindPropertyRelative("internalThoughts").boolValue);
+			dialogStep.FindPropertyRelative("delayBeforeDisplay").floatValue = EditorGUILayout.FloatField("Delay Before Display", dialogStep.FindPropertyRelative("delayBeforeDisplay").floatValue);
+
+			var choiceList = dialogStep.FindPropertyRelative("choices");
+			ShowElements("Choices", dialogStep.FindPropertyRelative("choices"), ListType.Choice);
+			if(choiceList.arraySize == 0)
+				dialogStep.FindPropertyRelative("next").intValue = EditorGUILayout.IntField("Next Step", dialogStep.FindPropertyRelative("next").intValue);
+			ShowElements("Variable Updates", dialogStep.FindPropertyRelative("variableUpdates"), ListType.StoryVariable);
+			EditorGUILayout.PropertyField(dialogStep.FindPropertyRelative("animation"), true);
+		}
 	}
 
 	private static void StoryVariableField(SerializedProperty storyVariable)
 	{
 		storyVariable.FindPropertyRelative("name").stringValue = EditorGUILayout.TextField("Name", storyVariable.FindPropertyRelative("name").stringValue);
 		storyVariable.FindPropertyRelative("value").intValue = EditorGUILayout.IntField("Value", storyVariable.FindPropertyRelative("value").intValue);
+	}
+
+	private static void ChoiceField(SerializedProperty choice)
+	{
+		choice.FindPropertyRelative("name").stringValue = EditorGUILayout.TextField("Name", choice.FindPropertyRelative("name").stringValue);
+		choice.FindPropertyRelative("target").intValue = EditorGUILayout.IntField("Target", choice.FindPropertyRelative("target").intValue);
 	}
 
 	private static void ShowButtons(SerializedProperty list, int index)

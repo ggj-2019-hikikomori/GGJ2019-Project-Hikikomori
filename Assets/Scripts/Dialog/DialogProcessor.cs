@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DialogProcessor : MonoBehaviour {
 
+	public Animator animator;
 	public List<Dialog> dialogs;
 
 	private Dialog currentDialog;
@@ -66,7 +67,7 @@ public class DialogProcessor : MonoBehaviour {
 
 	private bool CheckDialogConditions(Dialog dialog)
 	{
-		foreach (Dialog.StoryVariable variable in dialog.conditions) {
+		foreach (GameManager.StoryVariable variable in dialog.conditions) {
 			if (variable.value != GameManager.GetVariable(variable.name)) {
 				return false;
 			}
@@ -97,11 +98,30 @@ public class DialogProcessor : MonoBehaviour {
 
 				Dialog.DialogStep dialogStep = currentDialog.dialogSteps[currentStep];
 				// NEXT STEP EVENT : update variables
-				foreach (Dialog.StoryVariable variable in dialogStep.variableUpdates) {
-					GameManager.SetVariable(variable.name, variable.value);
+				foreach (GameManager.StoryVariable variable in dialogStep.variableUpdates) {
+					GameManager.SetVariable(variable);
 				}
 
-				currentStep = currentDialog.dialogSteps[currentStep].next;
+				if (animator != null)
+				{
+					if (dialogStep.animation == Dialog.Animation.GIVE)
+					{
+						animator.SetTrigger("Give");
+					} else if (dialogStep.animation == Dialog.Animation.WAVE) {
+						animator.SetTrigger("Wave");
+					}
+				}
+
+				if (dialogStep.choices.Count == 0)
+				{
+					currentStep = currentDialog.dialogSteps[currentStep].next;
+				}
+				else
+				{
+					// TODO : Implement Choice w/ Coroutine ?
+					currentStep = dialogStep.choices[0].target;
+				}
+
 				if (currentStep == -1)
 				{
 					currentStep = 0;
@@ -210,6 +230,6 @@ public class DialogProcessor : MonoBehaviour {
 
 	private string GetDisplayText()
 	{
-		return Localization.Translate("dialog." + currentDialog.dialogSteps[currentStep].text);
+		return Localization.Translate("dialog." + currentDialog.unlocalizedName + "." + currentDialog.dialogSteps[currentStep].text);
 	}
 }
