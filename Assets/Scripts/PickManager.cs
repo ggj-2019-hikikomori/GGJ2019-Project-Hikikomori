@@ -11,8 +11,7 @@ public class PickManager : MonoBehaviour {
 
 	private void Start()
 	{
-		foreach(var img in inventory)
-			img.sprite = empty;
+		updateInventory();
 	}
 
 	private void OnTriggerStay(Collider other)
@@ -46,5 +45,12 @@ public class PickManager : MonoBehaviour {
 			yield return new WaitForSeconds(0.8f);
 			player.isPaused = false;
 		}
+	}
+
+	void updateInventory()
+	{
+		inventory[0].sprite = GameManager.instance.item1;
+		inventory[1].sprite = GameManager.instance.item2;
+		inventory[2].sprite = GameManager.instance.item3;
 	}
 }
