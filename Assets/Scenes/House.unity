@@ -3196,7 +3196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anxietyBaseLevel: 0
   anxietyLevel: 0
-  anxietyPerSec: 40
+  anxietyPerSec: 30
   isHealing: 1
   currentScene: 
   posX: 0
