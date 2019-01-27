@@ -36,16 +36,11 @@ public class Door : MonoBehaviour
 						break;
 					case 3:
 						GameManager.instance.citySpawn = GameManager.CitySpawn.bakery;
-						GameManager.instance.anxietyPerSec = 30;
 						break;
 					case 4:
 						GameManager.instance.citySpawn = GameManager.CitySpawn.grocery;
 						break;
 				}
-			}
-			else if(levelID == 3)
-			{
-				GameManager.instance.anxietyPerSec = 0;
 			}
 			else
 			{

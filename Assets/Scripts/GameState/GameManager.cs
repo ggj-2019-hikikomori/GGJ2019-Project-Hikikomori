@@ -90,6 +90,6 @@ public class GameManager : MonoBehaviour
 	public void OnVariableUpdate(StoryVariable variable)
 	{
 		if (variable.name.Equals("anxietySet"))
-			anxietyLevel += variable.value;
+			anxietyLevel = variable.value;
 	}
 }
