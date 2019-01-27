@@ -24,9 +24,9 @@ MonoBehaviour:
     variableUpdates: []
     animation: 0
     choices:
-    - name: 1
+    - name: le choix 1
       target: 1
-    - name: 2
+    - name: "la r\xE9ponse D"
       target: 2
     next: 0
   - text: t'as fais le choix 1

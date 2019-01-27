@@ -245,12 +245,14 @@ public class DialogProcessor : MonoBehaviour {
 		waitingForPlayerChoice = true;
 		player.GetComponent<PlayerController>().isPaused = true;
 		choiceUI.SetActive(true);
-		choiceUI.GetComponent<Choice>().choosedInd = -1;
-		yield return new WaitUntil(() => choiceUI.GetComponent<Choice>().choosedInd != -1);
+		Choice choice = choiceUI.GetComponent<Choice>();
+		choice.updateChoiceTexts(dialogStep);
+		choice.choosedInd = -1;
+		yield return new WaitUntil(() => choice.choosedInd != -1);
 		choiceUI.SetActive(false);
 		player.GetComponent<PlayerController>().isPaused = false;
 
-		currentStep = dialogStep.choices[choiceUI.GetComponent<Choice>().choosedInd].target;
+		currentStep = dialogStep.choices[choice.choosedInd].target;
 
 		if (currentStep == -1)
 		{
