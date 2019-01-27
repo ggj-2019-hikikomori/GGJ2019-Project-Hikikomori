@@ -231,7 +231,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114041972875041488, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &26853387 stripped
@@ -554,7 +555,8 @@ Prefab:
       propertyPath: m_Name
       value: Cake (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114041972875041488, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &67735610 stripped
@@ -1070,7 +1072,8 @@ Prefab:
       propertyPath: m_Name
       value: Cake (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114041972875041488, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &208895010 stripped
@@ -1204,7 +1207,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -145.477
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114975344067778728, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &231995193 stripped
@@ -1409,7 +1413,8 @@ Prefab:
       propertyPath: m_Name
       value: Cake (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114041972875041488, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &289199484 stripped
@@ -1810,7 +1815,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -310.624
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114975344067778728, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &432158232 stripped
@@ -4141,7 +4147,8 @@ Prefab:
       propertyPath: m_Name
       value: Cake (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114041972875041488, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &818932751 stripped
@@ -5508,7 +5515,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -223.12
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114975344067778728, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1156076460 stripped
@@ -6365,7 +6373,8 @@ Prefab:
       propertyPath: m_Name
       value: Cake (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114041972875041488, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1325005384 stripped
@@ -6499,7 +6508,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -192.357
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114975344067778728, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1333734103 stripped
@@ -7171,7 +7181,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114975344067778728, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1452283450 stripped
@@ -7238,7 +7249,8 @@ Prefab:
       propertyPath: m_Name
       value: Cake (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114041972875041488, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3c4c5d66cf736c149bcf5c93ea5603fa, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1501304638 stripped
@@ -8908,7 +8920,8 @@ Prefab:
       propertyPath: m_Name
       value: Bread (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114975344067778728, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1928855226 stripped
@@ -8979,7 +8992,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -232.98099
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114975344067778728, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1952939868 stripped
