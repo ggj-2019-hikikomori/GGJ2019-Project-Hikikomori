@@ -16,7 +16,7 @@ public class groceryPickable : MonoBehaviour
 	
 	void Update ()
 	{
-		if (GameManager.GetVariable("item_jam") == 1)
+		if (GameManager.GetVariable("quest_jam") == 1)
 			jam.SetActive(true);
 		if (GameManager.GetVariable("item_flour_small") == 1)
 		{
