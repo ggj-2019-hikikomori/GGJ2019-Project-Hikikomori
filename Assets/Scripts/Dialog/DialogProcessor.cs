@@ -138,7 +138,8 @@ public class DialogProcessor : MonoBehaviour {
 						{
 							currentStep = 0;
 							currentDialog = GetDialog();
-							player.GetComponent<PlayerController>().isPaused = false;
+							if(currentDialog == GameManager.instance.dialog_empty)
+								player.GetComponent<PlayerController>().isPaused = false;
 						}
 						currentChar = 0;
 						dialogDisplayText.text = PartialText();
@@ -289,7 +290,8 @@ public class DialogProcessor : MonoBehaviour {
 		{
 			currentStep = 0;
 			currentDialog = GetDialog();
-			player.GetComponent<PlayerController>().isPaused = false;
+			if (currentDialog == GameManager.instance.dialog_empty)
+				player.GetComponent<PlayerController>().isPaused = false;
 		}
 
 		currentChar = 0;

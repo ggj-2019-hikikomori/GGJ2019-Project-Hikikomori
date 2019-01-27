@@ -131,7 +131,7 @@ MonoBehaviour:
     - name: anxietySet
       value: 75
     - name: anxietyResistance
-      value: 900
+      value: 95
     animation: 0
     choices: []
     next: -1
