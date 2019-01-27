@@ -1366,7 +1366,7 @@ Prefab:
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: dialogs.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -1547,7 +1547,7 @@ Prefab:
         type: 2}
       propertyPath: dialogs.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 777f5aa397b608a4cb6d4c0c972849fe,
+      objectReference: {fileID: 11400000, guid: 97233eb6fc021ee4f9e954867be8dc71,
         type: 2}
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -2471,6 +2471,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: GameManager+StoryVariableEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isPaused: 0
 --- !u!1 &1838285424
 GameObject:
   m_ObjectHideFlags: 0
