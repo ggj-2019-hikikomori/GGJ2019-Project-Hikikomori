@@ -21,9 +21,13 @@ public class PickManager : MonoBehaviour {
 			StartCoroutine(pickObjectCoroutine(other));
 	}
 
-	public void EmptySlot(int id)
+	public void EmptySlot(Sprite s)
 	{
-		inventory[id].sprite = empty;
+		foreach (var img in inventory)
+		{
+			if (img.sprite = s)
+				img.sprite = empty;
+		}
 	}
 
 	IEnumerator pickObjectCoroutine(Collider pickedObj)
