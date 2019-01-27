@@ -28,4 +28,4 @@ MonoBehaviour:
       value: 1
     animation: 0
     choices: []
-    next: 1
+    next: -1

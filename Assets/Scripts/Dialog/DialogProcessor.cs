@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DialogProcessor : MonoBehaviour {
 
@@ -22,8 +24,11 @@ public class DialogProcessor : MonoBehaviour {
 
 	private bool flagActionInput;
 
+	public EventSystem eventSystem;
 	public GameObject choiceUI;
+	public GameObject choiceButtonPefab;
 	public bool waitingForPlayerChoice;
+	private int choiceTarget;
 
 	void Start () {
 
@@ -237,33 +242,61 @@ public class DialogProcessor : MonoBehaviour {
 
 	private string GetDisplayText()
 	{
-		return Localization.Translate("dialog." + currentDialog.unlocalizedName + "." + currentDialog.dialogSteps[currentStep].text);
+		return Localization.Translate(GetUnlocalizedName());
 	}
+
+	private string GetUnlocalizedName()
+	{
+		if (currentDialog == null)
+		{
+			return "";
+		}
+		return "dialog." + currentDialog.unlocalizedName + "." + currentDialog.dialogSteps[currentStep].text;
+	}
+
 
 	private IEnumerator CoroutineChoice(Dialog.DialogStep dialogStep)
 	{
 		waitingForPlayerChoice = true;
 		player.GetComponent<PlayerController>().isPaused = true;
+		choiceTarget = -2;
+		for (int i = 0; i < dialogStep.choices.Count; i++)
+		{
+			Dialog.Choice c = dialogStep.choices[i];
+			GameObject go = Instantiate(choiceButtonPefab, choiceUI.transform);
+			var button = go.GetComponent<UnityEngine.UI.Button>();
+			var buttonText = button.GetComponentInChildren<Text>();
+			if (i == 0)
+			{
+				eventSystem.SetSelectedGameObject(go);
+			}
+			buttonText.text = Localization.Translate(GetUnlocalizedName() + "." + c.name);
+			button.onClick.AddListener(() => choiceTarget = c.target);
+		}
 		choiceUI.SetActive(true);
-		Choice choice = choiceUI.GetComponent<Choice>();
-		choice.updateChoiceTexts(dialogStep);
-		choice.choosedInd = -1;
-		yield return new WaitUntil(() => choice.choosedInd != -1);
-		choiceUI.SetActive(false);
-		player.GetComponent<PlayerController>().isPaused = false;
 
-		currentStep = dialogStep.choices[choice.choosedInd].target;
+		yield return new WaitUntil(() => choiceTarget != -2);
+		choiceUI.SetActive(false);
+
+		player.GetComponent<PlayerController>().isPaused = false;
+		currentStep = choiceTarget;
 
 		if (currentStep == -1)
 		{
 			currentStep = 0;
 			currentDialog = GetDialog();
 		}
+
 		currentChar = 0;
 		dialogDisplayText.text = PartialText();
 		Formatting();
 
 		StartCoroutine(CoroutinePartialText());
+		// Destroy all choice buttons
+		foreach (Transform c in choiceUI.transform)
+		{
+			GameObject.Destroy(c.gameObject);
+		}
 		waitingForPlayerChoice = false;
 	}
 }
