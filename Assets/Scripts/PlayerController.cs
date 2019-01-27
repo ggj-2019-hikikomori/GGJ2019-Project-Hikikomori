@@ -24,7 +24,15 @@ public class PlayerController : MonoBehaviour
 	public Animator animator;
 
 	float velocity;
-	public bool isPaused;
+	public bool isPaused {
+		get {
+			return GameManager.instance.isPaused;
+		}
+
+		set {
+			GameManager.instance.isPaused = value;
+		}
+	}
 
 	void Start ()
 	{

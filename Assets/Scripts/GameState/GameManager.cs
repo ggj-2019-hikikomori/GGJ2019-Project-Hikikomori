@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
 	#endregion
 
 	public StoryVariableEvent variableUpdateEvent;
+	public bool isPaused;
 
 	private void Awake()
 	{

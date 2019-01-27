@@ -21,15 +21,11 @@ public class AnxietyManager : MonoBehaviour
 
 	void Update()
 	{
-		if (!GameManager.instance.isHealing)
-			GameManager.instance.anxietyLevel += (GameManager.instance.anxietyPerSec - GameManager.instance.anxietyPerSec * ((float)GameManager.GetVariable("anxietyResistance")/100.0f)) * Time.deltaTime;
-		else
+		if (!GameManager.instance.isPaused && !GameManager.instance.isHealing)
+			GameManager.instance.anxietyLevel += (GameManager.instance.anxietyPerSec / ( 1 +  ((float)GameManager.GetVariable("anxietyResistance")/100.0f))) * Time.deltaTime;
+		else if (GameManager.instance.isHealing)
 			GameManager.instance.anxietyLevel -= 0.5f;
 
-		if (Input.GetKey(KeyCode.Keypad0))
-			GameManager.instance.anxietyLevel -= 1f;
-		else if (Input.GetKey(KeyCode.Keypad1))
-			GameManager.instance.anxietyLevel += 1f;
 
 		GameManager.instance.anxietyLevel = Mathf.Clamp(GameManager.instance.anxietyLevel, 0.0f, 100.0f);
 
