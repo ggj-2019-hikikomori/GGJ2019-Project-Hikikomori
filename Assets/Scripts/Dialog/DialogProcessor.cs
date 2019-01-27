@@ -93,6 +93,7 @@ public class DialogProcessor : MonoBehaviour {
 		if (other.CompareTag("Player"))
 		{
 			EnableDispay();
+			other.GetComponent<PlayerController>().isPaused = true;
 		}
 	}
 
@@ -133,6 +134,7 @@ public class DialogProcessor : MonoBehaviour {
 						{
 							currentStep = 0;
 							currentDialog = GetDialog();
+							player.GetComponent<PlayerController>().isPaused = false;
 						}
 						currentChar = 0;
 						dialogDisplayText.text = PartialText();
@@ -258,7 +260,6 @@ public class DialogProcessor : MonoBehaviour {
 	private IEnumerator CoroutineChoice(Dialog.DialogStep dialogStep)
 	{
 		waitingForPlayerChoice = true;
-		player.GetComponent<PlayerController>().isPaused = true;
 		choiceTarget = -2;
 		for (int i = 0; i < dialogStep.choices.Count; i++)
 		{
@@ -278,13 +279,13 @@ public class DialogProcessor : MonoBehaviour {
 		yield return new WaitUntil(() => choiceTarget != -2);
 		choiceUI.SetActive(false);
 
-		player.GetComponent<PlayerController>().isPaused = false;
 		currentStep = choiceTarget;
 
 		if (currentStep == -1)
 		{
 			currentStep = 0;
 			currentDialog = GetDialog();
+			player.GetComponent<PlayerController>().isPaused = false;
 		}
 
 		currentChar = 0;
