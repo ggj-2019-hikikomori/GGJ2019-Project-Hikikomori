@@ -1885,12 +1885,12 @@ Prefab:
     - target: {fileID: 65713574760967310, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_Size.z
-      value: 5.2712016
+      value: 2.2276282
       objectReference: {fileID: 0}
     - target: {fileID: 65713574760967310, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_Center.z
-      value: -2.0212553
+      value: -0.49946856
       objectReference: {fileID: 0}
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
