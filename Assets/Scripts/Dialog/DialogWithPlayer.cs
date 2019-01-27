@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class DialogWithPlayer : MonoBehaviour {
 
     [Range(0.001f, 0.02f)]
@@ -15,35 +15,44 @@ public class DialogWithPlayer : MonoBehaviour {
     private int currentStep;
     private int currentChar;
     private GameObject dialogDisplay;
+    private SpriteRenderer bubbleDisplaySprite;
     private TextMeshPro dialogDisplayText;
     private RectTransform refRectTransform;
     private Vector3 originalPositionRectTransform;
-    private Quaternion originalRotationRectTransform;
 
     private GameObject player;
+    private GameObject mainCamera;
 
     private bool flagActionInput;
 
 	void Start () {
-        if (transform.childCount != 1)
-        {
-            Debug.LogError("Error in dialog: missing text child");
-        }
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 
         if (dialogSteps.Count == 0)
         {
             Debug.LogError("Error in dialog: missing dialog");
         }
 
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (transform.childCount != 1)
+        {
+            Debug.LogError("Error in dialog: missing text child");
+        }
 
         dialogDisplay = transform.GetChild(0).gameObject;
         dialogDisplayText = dialogDisplay.GetComponent<TextMeshPro>();
 
+        if(dialogDisplay.transform.childCount != 1)
+        {
+            Debug.LogError("Error in dialog: missing bubble");
+        }
+
+        bubbleDisplaySprite = dialogDisplay.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
+
         refRectTransform = dialogDisplayText.GetComponent<RectTransform>();
         originalPositionRectTransform = refRectTransform.position;
-        originalRotationRectTransform = refRectTransform.rotation;
-
+        
         DisableDisplay();
 	}
 	
@@ -103,6 +112,7 @@ public class DialogWithPlayer : MonoBehaviour {
         currentChar = 0;
         dialogDisplayText.text = "";
         dialogDisplayText.enabled = false;
+        bubbleDisplaySprite.enabled = false;
     }
 
     private string PartialText()
@@ -116,13 +126,15 @@ public class DialogWithPlayer : MonoBehaviour {
         {
             dialogDisplayText.color = Color.white;
             dialogDisplayText.fontStyle = FontStyles.Bold | FontStyles.Italic;
-            dialogDisplayText.outlineWidth = 0.08f;
+            dialogDisplayText.outlineWidth = 0.2f;
+            bubbleDisplaySprite.enabled = true;
         }
         else
         {
             dialogDisplayText.color = Color.white;
             dialogDisplayText.fontStyle = FontStyles.Bold;
             dialogDisplayText.outlineWidth = 0.2f;
+            bubbleDisplaySprite.enabled = false;
         }
 
         switch(dialogSteps[currentStep].feeling)
@@ -149,8 +161,9 @@ public class DialogWithPlayer : MonoBehaviour {
         else
         {
             refRectTransform.position = originalPositionRectTransform;
-            refRectTransform.rotation = originalRotationRectTransform;
         }
+        refRectTransform.rotation = Quaternion.identity;
+        refRectTransform.rotation *= Quaternion.FromToRotation(refRectTransform.forward, Vector3.ProjectOnPlane(refRectTransform.position - mainCamera.transform.position, Vector3.up));
     }
 
     private IEnumerator CoroutinePartialText()
@@ -163,26 +176,4 @@ public class DialogWithPlayer : MonoBehaviour {
             yield return new WaitForSeconds(displaySpeedInverse);
         }
     }
-}
-
-[System.Serializable]
-public struct DialogStep
-{
-    public string text;
-    public DiaglogFeeling feeling;
-    public bool player;
-    public bool internalThoughts;
-
-    public GameObject sound;
-    public float delayBeforeDisplay;
-
-    public int next;
-}
-
-[System.Serializable]
-public enum DiaglogFeeling
-{
-    Neutral,
-    Good,
-    Bad
-}
+}*/
