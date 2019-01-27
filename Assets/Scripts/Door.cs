@@ -20,11 +20,13 @@ public class Door : MonoBehaviour
 		{
 			if (inside)
 			{
+				GameManager.instance.isHealing = false;
 				SceneManager.LoadScene(2);
 			}
 			else
 			{
 				GameManager.instance.spawnOnBed = false;
+				GameManager.instance.isHealing = true;
 				SceneManager.LoadScene(1);
 			}
 		}
