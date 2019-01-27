@@ -35,7 +35,11 @@ public class GameManager : MonoBehaviour
 	#endregion
 
 	#region Story Advancement
-	public bool spawnOnBed = true;
+	public enum HouseSpawn { bed, door };
+	public HouseSpawn houseSpawn = HouseSpawn.bed;
+
+	public enum CitySpawn { house, bakery, grocery };
+	public CitySpawn citySpawn = CitySpawn.house;
 
 	private Dictionary<string, int> storyVariables;
 	public Dialog dialog_empty;

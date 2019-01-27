@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(AudioSource))]
 public class Door : MonoBehaviour
 {
+	public int actualID;
 	public int levelID;
 	public Animation fadeOutAnimation;
 
@@ -22,8 +23,24 @@ public class Door : MonoBehaviour
 		{
 			if(levelID == 1)
 			{
-				GameManager.instance.spawnOnBed = false;
+				GameManager.instance.houseSpawn = GameManager.HouseSpawn.door;
 				GameManager.instance.isHealing = true;
+			}
+			else if(levelID == 2)
+			{
+				GameManager.instance.isHealing = false;
+				switch (actualID)
+				{
+					case 1:
+						GameManager.instance.citySpawn = GameManager.CitySpawn.house;
+						break;
+					case 3:
+						GameManager.instance.citySpawn = GameManager.CitySpawn.bakery;
+						break;
+					case 4:
+						GameManager.instance.citySpawn = GameManager.CitySpawn.grocery;
+						break;
+				}
 			}
 			else
 			{

@@ -51,7 +51,7 @@ public class AnxietyManager : MonoBehaviour
 
 		if (GameManager.instance.anxietyLevel >= 25.0f)
 		{
-			Camera.main.GetComponentInChildren<CameraMain>().setShakingValue(Mathf.Lerp(0.0f, 0.2f, Mathf.InverseLerp(25.0f, 100.0f, GameManager.instance.anxietyLevel)));
+			Camera.main.GetComponentInChildren<CameraMain>().setShakingValue(Mathf.Lerp(0.0f, 0.1f, Mathf.InverseLerp(25.0f, 100.0f, GameManager.instance.anxietyLevel)));
 			GrainModel.Settings grainSettings = profile.grain.settings;
 			grainSettings.intensity = Mathf.Lerp(0.0f, 1.0f, Mathf.InverseLerp(25.0f, 100.0f, GameManager.instance.anxietyLevel));
 			profile.grain.settings = grainSettings;
@@ -72,7 +72,7 @@ public class AnxietyManager : MonoBehaviour
 		fadeOut.Play();
 		yield return new WaitUntil(() => fadeOut.isPlaying == false);
 		GameManager.instance.anxietyLevel = 99.9f;
-		GameManager.instance.spawnOnBed = true;
+		GameManager.instance.houseSpawn = GameManager.HouseSpawn.bed;
 		GameManager.instance.isHealing = true;
 		GetComponent<PlayerController>().isPaused = false;
 		SceneManager.LoadScene(1);

@@ -11,7 +11,7 @@ public class HouseSpawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (GameManager.instance.spawnOnBed)
+		if (GameManager.instance.houseSpawn == GameManager.HouseSpawn.bed)
 			player.transform.position = bedSpawn.position;
 		else
 			player.transform.position = doorSpawn.position;

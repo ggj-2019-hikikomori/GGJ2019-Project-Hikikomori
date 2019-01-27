@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/House.unity
     guid: e30b0890d1f36ef4d9c975d5a7666935
   - enabled: 1
-    path: Assets/Scenes/Outdoor.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/City.unity
+    guid: 74404766332a2874ba9e8ba60468a1ef
+  - enabled: 1
+    path: Assets/Scenes/Bakery.unity
+    guid: 9882d4406a9576648829715670762044
+  - enabled: 1
+    path: Assets/Scenes/Grocery.unity
+    guid: f289564371c3efd4093252d03fde9501
   m_configObjects: {}
