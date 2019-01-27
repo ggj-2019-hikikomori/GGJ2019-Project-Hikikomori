@@ -22,7 +22,7 @@ public class AnxietyManager : MonoBehaviour
 	void Update()
 	{
 		if (!GameManager.instance.isHealing)
-			GameManager.instance.anxietyLevel += GameManager.instance.anxietyPerSec * Time.deltaTime;
+			GameManager.instance.anxietyLevel += (GameManager.instance.anxietyPerSec - GameManager.instance.anxietyPerSec * ((float)GameManager.GetVariable("anxietyResistance")/100.0f)) * Time.deltaTime;
 		else
 			GameManager.instance.anxietyLevel -= 0.5f;
 
