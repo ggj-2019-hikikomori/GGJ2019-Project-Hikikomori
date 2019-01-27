@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
 		storyVariables = new Dictionary<string, int>();
 		variableUpdateEvent = new StoryVariableEvent();
-		Localization.LoadLanguage("fr_FR");
+		Localization.LoadLanguage("en_US");
 		variableUpdateEvent.AddListener(OnVariableUpdate);
 	}
 

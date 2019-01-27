@@ -1,9 +1,73 @@
 dialog.empty.nothing=
 
 dialog.example.intro=Hey ! Psss..
-dialog.example.question=Dis, tu veux boire du bon sprite sa mere ?
-dialog.example.accepted=Hehe, t'es un vrai toi, tiens !
-dialog.example.question.accept=Euh, ouai pourquoi pas
-dialog.example.question.deny=Azy degage bouffon
+dialog.example.question=Do you want some good sprite sa mere ?
+dialog.example.accepted=Hehe, u real ni[b][b]a !
 
-dialog.unlock_plant.intro=J'aimerais bien avoir des plantes...
+dialog.d04.step0=Tiens, Minette n'est pas rentrée hier soir,
+dialog.d04.step1=Ce n'est pas normal...
+
+dialog.d05.step0=Est-ce que je veux vraiment sortir ?
+dialog.d05.step1=Hmmm... Minette a besoin de moi.
+
+dialog.d06.step0=Oh non, je ne me sens pas bien du tout.
+
+dialog.d07.step0=C'est tellement effrayant dehors, je n'y arriverais jamais...
+dialog.d07.step1=Je...je ne sais pas quoi faire...
+dialog.d07.step1.accept=Aider Minette
+dialog.d07.step1.deny=Rester
+dialog.d07.step2=Est-ce que j'y vais maintenant ?
+dialog.d07.step2.accept=Aider Minette
+dialog.d07.step2.deny=Rester
+dialog.d07.step3=Elle va revenir, je peux attendre encore aujourd'hui.
+dialog.d07.step4=Pauvre Minette...
+dialog.d07.step5=Non, je ne peux pas la laisser toute seule.
+dialog.d07.step6=Elle a besoin de moi... et j'ai besoin d'elle !
+dialog.d07.step7=Je vais attendre et j'irai demain.
+dialog.d07.step8=Oui, on va faire comme ça.
+
+
+dialog.d11.step0=Oh ! C'est le jouet préféré de Minette !
+
+dialog.d12.step0=Oh non, non, non....
+
+dialog.d13.step0=Hé bonjour ! Vous êtes le propriétaire de Minette ?
+dialog.d13.step1=Aaaah !!!
+
+dialog.d14.step0=Oh lalalala... J'ai eu si peur...
+dialog.d14.step1=Je ne me sens pas capable de sortir, il y a trop de monde.
+dialog.d14.step2=Mais Minette..?
+dialog.d14.step3.accept=Sortir
+dialog.d14.step3.deny=Attendre
+dialog.d14.step4=Cette personne a parlé de Minette, elle pourrait peut-être m'aider.
+dialog.d14.step5=Je vais attendre qu'il s'en aille, je sortirai plus tard.
+dialog.d14.step6=Voilà, il a dû partir.
+
+dialog.d16.step0=Monsieur vous allez bien ?
+dialog.d16.step1=!!!
+dialog.d16.step2=Je voulais vous parler de Minette.
+dialog.d16.step3=Je l'ai vue ce matin aller tout droit vers la boulangerie.
+dialog.d16.step4=Oh... Euh... Merci.
+
+dialog.d17.step0=Ouf... Il m'avait attendu ! 
+dialog.d17.step1=Mais grâce à lui, je sais maintent où commencer à chercher....
+dialog.d17.step2=Et je lui ai répondu !!!
+dialog.d17.step3=Oui, j'ai pu discuter avec lui.
+dialog.d17.step4=Bon, commençons par la boulangerie...
+dialog.d17.step5=La boulangerie ?
+dialog.d17.step6=Mais je en sais pas où elle est !
+dialog.d17.step7=Oh non... j'aurais dû lui demander...
+dialog.d17.step8=Non, impossible. Je n'aurais jamais réussi à lui demander...
+dialog.d17.step9=Quoi que...?
+
+dialog.d18.step0=Bon...bonjour ? Euh... la boulangerie...? S'il vous plait...
+dialog.d18.step1=Bonjour ! Vous êtes dans la mauvaise direction.
+dialog.d18.step2=Vous devez faire demi-tour et continuer tout droit.
+dialog.d18.step3=Après le virage la boulangerie sera sur votre gauche.
+dialog.d18.step4=Merci.
+
+dialog.d19.step1=J'ai besoin de m'arrêter 5min...
+dialog.d19.step1=Cet endroit a l'air paisaible.
+
+dialog.d20.step1=Oh minou, minou, minou. Qu'as-tu fais ?
+
