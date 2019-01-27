@@ -1738,7 +1738,7 @@ Prefab:
         type: 2}
       propertyPath: dialogs.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 515306dba99b5b345981a921e4b5ae09,
+      objectReference: {fileID: 11400000, guid: 777f5aa397b608a4cb6d4c0c972849fe,
         type: 2}
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -2556,10 +2556,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anxietyBaseLevel: 0
   anxietyLevel: 0
+  anxietyPerSec: 0
+  isHealing: 0
   currentScene: 
   posX: 0
   posY: 0
   posZ: 0
+  item1: {fileID: 0}
+  item2: {fileID: 0}
+  item3: {fileID: 0}
   spawnOnBed: 1
   dialog_empty: {fileID: 11400000, guid: e9220f0b22cb2af43b5922a375890409, type: 2}
   variableUpdateEvent:

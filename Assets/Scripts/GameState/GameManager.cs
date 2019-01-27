@@ -45,15 +45,17 @@ public class GameManager : MonoBehaviour
 
 	private void Awake()
 	{
-		storyVariables = new Dictionary<string, int>();
-		variableUpdateEvent = new StoryVariableEvent();
-		Localization.LoadLanguage("fr_FR");
 		if (instance == null)
 			instance = this;
 		else if (instance != this)
 			Destroy(gameObject);
 
 		DontDestroyOnLoad(this);
+
+		storyVariables = new Dictionary<string, int>();
+		variableUpdateEvent = new StoryVariableEvent();
+		Localization.LoadLanguage("fr_FR");
+		variableUpdateEvent.AddListener(OnVariableUpdate);
 	}
 
     public static bool ActionButton()
@@ -78,5 +80,11 @@ public class GameManager : MonoBehaviour
 			return 0;
 		}
 
+	}
+
+	public void OnVariableUpdate(StoryVariable variable)
+	{
+		if (variable.name.Equals("AnxietySet"))
+			anxietyLevel += variable.value;
 	}
 }

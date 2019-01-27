@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fc4c4a767dd104cae59aa425444ee2, type: 3}
+  m_Name: AnxietySettest
+  m_EditorClassIdentifier: 
+  unlocalizedName: 
+  displaySpeedInverse: 0
+  conditions: []
+  dialogSteps:
+  - text: tu va prendre cher
+    feeling: 0
+    player: 0
+    internalThoughts: 0
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates:
+    - name: AnxietySet
+      value: 99
+    animation: 0
+    choices: []
+    next: -1
