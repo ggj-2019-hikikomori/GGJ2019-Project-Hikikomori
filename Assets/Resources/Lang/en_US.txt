@@ -36,11 +36,11 @@ dialog.d13.step1=Aaaah !!!
 dialog.d14.step0=Geez... I was so scared...
 dialog.d14.step1=I don't think I'm capable of doing it, there are too many people.
 dialog.d14.step2=But Kitty..?
-dialog.d14.step3.accept=Going out
-dialog.d14.step3.deny=Wait
-dialog.d14.step4=This person talked about Kitty, he might be able to help me.
-dialog.d14.step5=I will wait until he leaves and go later.
-dialog.d14.step6=Now he must be gone.
+dialog.d14.step2.accept=Going out
+dialog.d14.step2.deny=Wait
+dialog.d14.step3=This person talked about Kitty, he might be able to help me.
+dialog.d14.step4=I will wait until he leaves and go later.
+dialog.d14.step5=Now he must be gone.
 
 dialog.d16.step0=Sir, are you ok?
 dialog.d16.step1=!!!
@@ -65,8 +65,8 @@ dialog.d18.step2=You must go in the opposite direction.
 dialog.d18.step3=It's on the left around the bend.
 dialog.d18.step4=Thank you.
 
-dialog.d19.step1=I need to take a break.
+dialog.d19.step0=I need to take a break.
 dialog.d19.step1=This place looks peaceful.
 
-dialog.d20.step1=Oh Kitty cat. What have you done?
+dialog.d20.step0=Oh Kitty cat. What have you done?
 

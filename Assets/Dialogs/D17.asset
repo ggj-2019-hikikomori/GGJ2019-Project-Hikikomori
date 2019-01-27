@@ -111,8 +111,8 @@ MonoBehaviour:
     next: 9
   - text: step9
     feeling: 0
-    player: 0
-    internalThoughts: 0
+    player: 1
+    internalThoughts: 1
     sound: {fileID: 0}
     delayBeforeDisplay: 0
     variableUpdates:
