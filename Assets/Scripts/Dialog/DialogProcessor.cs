@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DialogProcessor : MonoBehaviour {
 
+	public Animator animator;
 	public List<Dialog> dialogs;
 
 	private Dialog currentDialog;
@@ -20,6 +23,12 @@ public class DialogProcessor : MonoBehaviour {
 	private GameObject mainCamera;
 
 	private bool flagActionInput;
+
+	public EventSystem eventSystem;
+	public GameObject choiceUI;
+	public GameObject choiceButtonPefab;
+	public bool waitingForPlayerChoice;
+	private int choiceTarget;
 
 	void Start () {
 
@@ -66,7 +75,7 @@ public class DialogProcessor : MonoBehaviour {
 
 	private bool CheckDialogConditions(Dialog dialog)
 	{
-		foreach (Dialog.StoryVariable variable in dialog.conditions) {
+		foreach (GameManager.StoryVariable variable in dialog.conditions) {
 			if (variable.value != GameManager.GetVariable(variable.name)) {
 				return false;
 			}
@@ -89,33 +98,56 @@ public class DialogProcessor : MonoBehaviour {
 
 	private void OnTriggerStay(Collider other)
 	{
-		if (currentChar >= GetDisplayText().Length)
+		if (!waitingForPlayerChoice)
 		{
-			if (other.CompareTag("Player") && flagActionInput)
+			if (currentChar >= GetDisplayText().Length)
 			{
-				StopCoroutine(CoroutinePartialText());
-
-				Dialog.DialogStep dialogStep = currentDialog.dialogSteps[currentStep];
-				// NEXT STEP EVENT : update variables
-				foreach (Dialog.StoryVariable variable in dialogStep.variableUpdates) {
-					GameManager.SetVariable(variable.name, variable.value);
-				}
-
-				currentStep = currentDialog.dialogSteps[currentStep].next;
-				if (currentStep == -1)
+				if (other.CompareTag("Player") && flagActionInput)
 				{
-					currentStep = 0;
-					currentDialog = GetDialog();
+					StopCoroutine(CoroutinePartialText());
+
+					Dialog.DialogStep dialogStep = currentDialog.dialogSteps[currentStep];
+					// NEXT STEP EVENT : update variables
+					foreach (GameManager.StoryVariable variable in dialogStep.variableUpdates)
+					{
+						GameManager.SetVariable(variable);
+					}
+
+					if (animator != null)
+					{
+						if (dialogStep.animation == Dialog.Animation.GIVE)
+						{
+							animator.SetTrigger("Give");
+						}
+						else if (dialogStep.animation == Dialog.Animation.WAVE)
+						{
+							animator.SetTrigger("Wave");
+						}
+					}
+
+					if (dialogStep.choices.Count == 0)
+					{
+						currentStep = currentDialog.dialogSteps[currentStep].next;
+
+						if (currentStep == -1)
+						{
+							currentStep = 0;
+							currentDialog = GetDialog();
+						}
+						currentChar = 0;
+						dialogDisplayText.text = PartialText();
+						Formatting();
+
+						StartCoroutine(CoroutinePartialText());
+					}
+					else
+					{
+						StartCoroutine(CoroutineChoice(dialogStep));
+					}
 				}
-				currentChar = 0;
-				dialogDisplayText.text = PartialText();
-				Formatting();
-
-				StartCoroutine(CoroutinePartialText());
-
 			}
+			Placing();
 		}
-		Placing();
 	}
 
 	private void OnTriggerExit(Collider other)
@@ -210,6 +242,61 @@ public class DialogProcessor : MonoBehaviour {
 
 	private string GetDisplayText()
 	{
-		return Localization.Translate("dialog." + currentDialog.dialogSteps[currentStep].text);
+		return Localization.Translate(GetUnlocalizedName());
+	}
+
+	private string GetUnlocalizedName()
+	{
+		if (currentDialog == null)
+		{
+			return "";
+		}
+		return "dialog." + currentDialog.unlocalizedName + "." + currentDialog.dialogSteps[currentStep].text;
+	}
+
+
+	private IEnumerator CoroutineChoice(Dialog.DialogStep dialogStep)
+	{
+		waitingForPlayerChoice = true;
+		player.GetComponent<PlayerController>().isPaused = true;
+		choiceTarget = -2;
+		for (int i = 0; i < dialogStep.choices.Count; i++)
+		{
+			Dialog.Choice c = dialogStep.choices[i];
+			GameObject go = Instantiate(choiceButtonPefab, choiceUI.transform);
+			var button = go.GetComponent<UnityEngine.UI.Button>();
+			var buttonText = button.GetComponentInChildren<Text>();
+			if (i == 0)
+			{
+				eventSystem.SetSelectedGameObject(go);
+			}
+			buttonText.text = Localization.Translate(GetUnlocalizedName() + "." + c.name);
+			button.onClick.AddListener(() => choiceTarget = c.target);
+		}
+		choiceUI.SetActive(true);
+
+		yield return new WaitUntil(() => choiceTarget != -2);
+		choiceUI.SetActive(false);
+
+		player.GetComponent<PlayerController>().isPaused = false;
+		currentStep = choiceTarget;
+
+		if (currentStep == -1)
+		{
+			currentStep = 0;
+			currentDialog = GetDialog();
+		}
+
+		currentChar = 0;
+		dialogDisplayText.text = PartialText();
+		Formatting();
+
+		StartCoroutine(CoroutinePartialText());
+		// Destroy all choice buttons
+		foreach (Transform c in choiceUI.transform)
+		{
+			GameObject.Destroy(c.gameObject);
+		}
+		waitingForPlayerChoice = false;
 	}
 }

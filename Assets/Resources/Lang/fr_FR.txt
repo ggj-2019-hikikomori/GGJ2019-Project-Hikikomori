@@ -1,1 +1,9 @@
-dialog.test=Bonjour a toi cher ami.
+dialog.empty.nothing=
+
+dialog.example.intro=Hey ! Psss..
+dialog.example.question=Dis, tu veux boire du bon sprite sa mere ?
+dialog.example.accepted=Hehe, t'es un vrai toi, tiens !
+dialog.example.question.accept=Euh, ouai pourquoi pas
+dialog.example.question.deny=Azy degage bouffon
+
+dialog.unlock_plant.intro=J'aimerais bien avoir des plantes...

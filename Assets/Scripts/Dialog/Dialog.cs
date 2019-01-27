@@ -1,15 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "New Dialog", menuName = "Dialog")]
 public class Dialog : ScriptableObject {
+
+	public string unlocalizedName;
 
 	[Range(0.001f, 0.02f)]
 	public float displaySpeedInverse;
 
 	[SerializeField]
-	public List<StoryVariable> conditions;
+	public List<GameManager.StoryVariable> conditions;
 
 	[SerializeField]
 	public List<DialogStep> dialogSteps = new List<DialogStep>();
@@ -26,8 +30,13 @@ public class Dialog : ScriptableObject {
 		public float delayBeforeDisplay;
 
 		[SerializeField]
-		public List<StoryVariable> variableUpdates;
+		public List<GameManager.StoryVariable> variableUpdates;
 
+		[SerializeField]
+		public Animation animation;
+
+		[SerializeField]
+		public List<Choice> choices;
 
 		public int next;
 	}
@@ -41,10 +50,17 @@ public class Dialog : ScriptableObject {
 	}
 
 	[System.Serializable]
-	public struct StoryVariable
+	public struct Choice
 	{
 		public string name;
-		public int value;
+		public int target;
 	}
 
+	[Serializable]
+	public enum Animation
+	{
+		NONE,
+		WAVE,
+		GIVE
+	}
 }
