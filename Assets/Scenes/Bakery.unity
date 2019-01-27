@@ -5180,6 +5180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1079696242}
+  - component: {fileID: 1079696243}
   m_Layer: 0
   m_Name: Pickable
   m_TagString: Untagged
@@ -5200,6 +5201,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1079696243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079696241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35eefffe95e49046872baa8774db010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  picker: {fileID: 2111410496}
+  baguetteSprite: {fileID: 21300000, guid: 2d6443c45184e58409d32068b55e8acf, type: 3}
 --- !u!1001 &1088667426
 Prefab:
   m_ObjectHideFlags: 0
@@ -9962,6 +9976,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390dd9b3d8c0a4e4091eaef3b21184a9, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &2111410496 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114539539831199376, guid: 390dd9b3d8c0a4e4091eaef3b21184a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2111410495}
+  m_Script: {fileID: 11500000, guid: a2443626129640e4e8ea7b9dc39cb9a8, type: 3}
 --- !u!1001 &2129893622
 Prefab:
   m_ObjectHideFlags: 0
