@@ -8,6 +8,7 @@ public class PickManager : MonoBehaviour {
 	public List<Image> inventory;
 	public Sprite empty;
 	public PlayerController player;
+	public bool isPicking = false;
 
 	private void Start()
 	{
@@ -16,7 +17,7 @@ public class PickManager : MonoBehaviour {
 
 	private void OnTriggerStay(Collider other)
 	{
-		if (other.CompareTag("Pickable") && GameManager.ActionButton())
+		if (other.CompareTag("Pickable") && GameManager.ActionButton() && !isPicking)
 			StartCoroutine(pickObjectCoroutine(other));
 	}
 
@@ -27,24 +28,23 @@ public class PickManager : MonoBehaviour {
 
 	IEnumerator pickObjectCoroutine(Collider pickedObj)
 	{
-		if(pickedObj != null)
-		{
-			player.animator.SetTrigger("Pickup");
-			player.isPaused = true;
-			yield return new WaitForSeconds(1.0f);
-			foreach (var img in inventory)
-			{
-				if (img.sprite == empty && pickedObj != null)
-				{
-					img.sprite = pickedObj.GetComponent<PickableObject>().icon;
-					break;
-				}
-			}
-			if(pickedObj != null)
-				Destroy(pickedObj.gameObject);
-			yield return new WaitForSeconds(0.8f);
-			player.isPaused = false;
-		}
+		isPicking = true;
+		player.animator.SetTrigger("Pickup");
+		player.isPaused = true;
+		yield return new WaitForSeconds(1.0f);
+
+		if (GameManager.instance.item1 == empty)
+			GameManager.instance.item1 = pickedObj.GetComponent<PickableObject>().icon;
+		else if (GameManager.instance.item2 == empty)
+			GameManager.instance.item2 = pickedObj.GetComponent<PickableObject>().icon;
+		else if (GameManager.instance.item3 == empty)
+			GameManager.instance.item3 = pickedObj.GetComponent<PickableObject>().icon;
+		updateInventory();
+
+		Destroy(pickedObj.gameObject);
+		yield return new WaitForSeconds(0.8f);
+		player.isPaused = false;
+		isPicking = false;
 	}
 
 	void updateInventory()
