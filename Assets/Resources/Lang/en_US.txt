@@ -88,3 +88,54 @@ dialog.d22.step2=I need to fix this so he tells me where Kitty went.
 dialog.d23.step0=I need some flour to fix Kitty's mistake.
 
 dialog.d24.step0=Go on! You almost got it.
+
+dialog.d25.step0=Hello!
+dialog.d25.step1=Hello
+
+dialog.d26.step0=Hello young man,
+dialog.d26.step1=Could you please help me shopping? 
+dialog.d26.step2=I don't have too many things to buy but my eyes are not so sharp anymore.
+dialog.d26.step2.accept=Help the old man
+dialog.d26.step2.deny=Don't help the old man
+dialog.d26.step3=Uh... Yes I can help you.
+dialog.d26.step4=Thank you very much young man.
+dialog.d26.step5=I'm looking for a jar of jam please.
+dialog.d26.step6=I'm sorry. Uh... I'm busy.
+dialog.d26.step7=Oh, I see. I understand...
+
+dialog.d28.step0=Here is your jam Sir.
+dialog.d28.step1=Thank you so much!
+dialog.d28.step2=Take these seeds as a thank you.
+
+dialog.d29.step0=So, which bag size will I take?
+
+dialog.d30.step0=Kitty's favorite food! She will be so happy!
+
+dialog.d31.step0=Thank you for your purchases ! Have a nice day.
+dialog.d31.step1=Have a nice day too.
+
+dialog.d32.step0=Well, that takes care of that.
+
+dialog.d33.step0=Thank, your cat was heading to the school.
+dialog.d33.step1=Thank, and sorry again.
+
+dialog.d34.step0=Wow! Thanks a lot, this is too much!
+dialog.d34.step1=I'm sorry I yelled at you.
+dialog.d34.step2=Let me give you this to make amends.
+
+dialog.d35.step0=So, now I know where to go.
+
+dialog.d36.step0=I am very glad!
+dialog.d36.step1=This baker was really nice after all.
+dialog.d36.step2=This baguette smells very good, I will come shop here in the future.
+
+dialog.d37.step0=This white cat in the park was so cute!
+
+dialog.d38.step0=Yes, he was so fluffy!
+
+dialog.d39.step0=Nice, Kitty is ok!
+dialog.d39.step1=I just need to find the entrance of the park.
+
+dialog.d40.step0=Kitty!!! Here you are!
+dialog.d40.step1=Oh I am so happy I found you.
+dialog.d40.step2=Let's go back home.
