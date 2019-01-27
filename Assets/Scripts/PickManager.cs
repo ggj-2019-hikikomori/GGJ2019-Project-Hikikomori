@@ -23,11 +23,24 @@ public class PickManager : MonoBehaviour {
 
 	public void EmptySlot(Sprite s)
 	{
-		foreach (var img in inventory)
-		{
-			if (img.sprite = s)
-				img.sprite = empty;
-		}
+		if (GameManager.instance.item1 == s)
+			GameManager.instance.item1 = empty;
+		else if (GameManager.instance.item2 == s)
+			GameManager.instance.item2 = empty;
+		else if (GameManager.instance.item3 == s)
+			GameManager.instance.item3 = empty;
+		updateInventory();
+	}
+
+	public void SetSlot(Sprite s)
+	{
+		if (GameManager.instance.item1 == empty)
+			GameManager.instance.item1 = s;
+		else if (GameManager.instance.item2 == empty)
+			GameManager.instance.item2 = s;
+		else if (GameManager.instance.item3 == empty)
+			GameManager.instance.item3 = s;
+		updateInventory();
 	}
 
 	IEnumerator pickObjectCoroutine(Collider pickedObj)
@@ -37,13 +50,7 @@ public class PickManager : MonoBehaviour {
 		player.isPaused = true;
 		yield return new WaitForSeconds(1.0f);
 
-		if (GameManager.instance.item1 == empty)
-			GameManager.instance.item1 = pickedObj.GetComponent<PickableObject>().icon;
-		else if (GameManager.instance.item2 == empty)
-			GameManager.instance.item2 = pickedObj.GetComponent<PickableObject>().icon;
-		else if (GameManager.instance.item3 == empty)
-			GameManager.instance.item3 = pickedObj.GetComponent<PickableObject>().icon;
-		updateInventory();
+		SetSlot(pickedObj.GetComponent<PickableObject>().icon);
 
 		Destroy(pickedObj.gameObject);
 		yield return new WaitForSeconds(0.8f);
