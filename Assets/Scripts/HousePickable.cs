@@ -26,7 +26,7 @@ public class HousePickable : MonoBehaviour
 			picker.EmptySlot(seedSprite);
 			plants.SetActive(true);
 		}
-		if (GameManager.GetVariable("item_mouse") == 1)
+		if (GameManager.GetVariable("dialog_11") == 1)
 		{
 			picker.EmptySlot(mouseSprite);
 			mouse.SetActive(true);
