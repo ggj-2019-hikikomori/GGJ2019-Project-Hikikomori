@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(AudioSource))]
 public class Door : MonoBehaviour
 {
-
+	public int actualID;
+	public int levelID;
 	public Animation fadeOutAnimation;
-	public bool inside;
 
     private bool flagActionInput; 
 
@@ -21,15 +21,32 @@ public class Door : MonoBehaviour
 	{
 		if (other.CompareTag("Player") && flagActionInput)
 		{
-			if (inside)
+			if(levelID == 1)
 			{
-				StartCoroutine(LoadScene(2));
+				GameManager.instance.houseSpawn = GameManager.HouseSpawn.door;
+				GameManager.instance.isHealing = true;
+			}
+			else if(levelID == 2)
+			{
+				GameManager.instance.isHealing = false;
+				switch (actualID)
+				{
+					case 1:
+						GameManager.instance.citySpawn = GameManager.CitySpawn.house;
+						break;
+					case 3:
+						GameManager.instance.citySpawn = GameManager.CitySpawn.bakery;
+						break;
+					case 4:
+						GameManager.instance.citySpawn = GameManager.CitySpawn.grocery;
+						break;
+				}
 			}
 			else
 			{
-				GameManager.instance.spawnOnBed = false;
-				StartCoroutine(LoadScene(1));
+				GameManager.instance.isHealing = false;
 			}
+			StartCoroutine(LoadScene(levelID));
 		}
     }
 
