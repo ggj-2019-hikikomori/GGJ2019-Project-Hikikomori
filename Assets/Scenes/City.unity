@@ -2141,6 +2141,17 @@ MonoBehaviour:
   GlowColor: {r: 1, g: 0.89133024, b: 0, a: 1}
   LerpFactor: 10
   icon: {fileID: 21300000, guid: e3961666d7aeec34da7dad24ea17fd07, type: 3}
+--- !u!114 &43904779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43904776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2a16f0ae264ab4dab86daa011ad4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &44706415
 GameObject:
   m_ObjectHideFlags: 0
@@ -15806,7 +15817,7 @@ Transform:
   - {fileID: 447235324}
   - {fileID: 948722065}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &281519848
 Prefab:
@@ -61147,7 +61158,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1155925227
 Prefab:
