@@ -25,3 +25,15 @@ MonoBehaviour:
     animation: 0
     choices: []
     next: 0
+  - text: nothing
+    feeling: 0
+    player: 0
+    internalThoughts: 0
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices:
+    - name: 
+      target: 0
+    next: 0

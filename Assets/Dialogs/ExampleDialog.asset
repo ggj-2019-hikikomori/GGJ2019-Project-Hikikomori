@@ -40,7 +40,7 @@ MonoBehaviour:
       target: 2
     - name: deny
       target: -1
-    next: -1
+    next: 0
   - text: accepted
     feeling: 0
     player: 0
