@@ -22,6 +22,9 @@ public class DialogProcessor : MonoBehaviour {
 
 	private bool flagActionInput;
 
+	public GameObject choiceUI;
+	public bool waitingForPlayerChoice;
+
 	void Start () {
 
 		currentDialog = GetDialog();
@@ -90,52 +93,56 @@ public class DialogProcessor : MonoBehaviour {
 
 	private void OnTriggerStay(Collider other)
 	{
-		if (currentChar >= GetDisplayText().Length)
+		if (!waitingForPlayerChoice)
 		{
-			if (other.CompareTag("Player") && flagActionInput)
+			if (currentChar >= GetDisplayText().Length)
 			{
-				StopCoroutine(CoroutinePartialText());
-
-				Dialog.DialogStep dialogStep = currentDialog.dialogSteps[currentStep];
-				// NEXT STEP EVENT : update variables
-				foreach (GameManager.StoryVariable variable in dialogStep.variableUpdates) {
-					GameManager.SetVariable(variable);
-				}
-
-				if (animator != null)
+				if (other.CompareTag("Player") && flagActionInput)
 				{
-					if (dialogStep.animation == Dialog.Animation.GIVE)
+					StopCoroutine(CoroutinePartialText());
+
+					Dialog.DialogStep dialogStep = currentDialog.dialogSteps[currentStep];
+					// NEXT STEP EVENT : update variables
+					foreach (GameManager.StoryVariable variable in dialogStep.variableUpdates)
 					{
-						animator.SetTrigger("Give");
-					} else if (dialogStep.animation == Dialog.Animation.WAVE) {
-						animator.SetTrigger("Wave");
+						GameManager.SetVariable(variable);
+					}
+
+					if (animator != null)
+					{
+						if (dialogStep.animation == Dialog.Animation.GIVE)
+						{
+							animator.SetTrigger("Give");
+						}
+						else if (dialogStep.animation == Dialog.Animation.WAVE)
+						{
+							animator.SetTrigger("Wave");
+						}
+					}
+
+					if (dialogStep.choices.Count == 0)
+					{
+						currentStep = currentDialog.dialogSteps[currentStep].next;
+
+						if (currentStep == -1)
+						{
+							currentStep = 0;
+							currentDialog = GetDialog();
+						}
+						currentChar = 0;
+						dialogDisplayText.text = PartialText();
+						Formatting();
+
+						StartCoroutine(CoroutinePartialText());
+					}
+					else
+					{
+						StartCoroutine(CoroutineChoice(dialogStep));
 					}
 				}
-
-				if (dialogStep.choices.Count == 0)
-				{
-					currentStep = currentDialog.dialogSteps[currentStep].next;
-				}
-				else
-				{
-					// TODO : Implement Choice w/ Coroutine ?
-					currentStep = dialogStep.choices[0].target;
-				}
-
-				if (currentStep == -1)
-				{
-					currentStep = 0;
-					currentDialog = GetDialog();
-				}
-				currentChar = 0;
-				dialogDisplayText.text = PartialText();
-				Formatting();
-
-				StartCoroutine(CoroutinePartialText());
-
 			}
+			Placing();
 		}
-		Placing();
 	}
 
 	private void OnTriggerExit(Collider other)
@@ -231,5 +238,30 @@ public class DialogProcessor : MonoBehaviour {
 	private string GetDisplayText()
 	{
 		return Localization.Translate("dialog." + currentDialog.unlocalizedName + "." + currentDialog.dialogSteps[currentStep].text);
+	}
+
+	private IEnumerator CoroutineChoice(Dialog.DialogStep dialogStep)
+	{
+		waitingForPlayerChoice = true;
+		player.GetComponent<PlayerController>().isPaused = true;
+		choiceUI.SetActive(true);
+		choiceUI.GetComponent<Choice>().choosedInd = -1;
+		yield return new WaitUntil(() => choiceUI.GetComponent<Choice>().choosedInd != -1);
+		choiceUI.SetActive(false);
+		player.GetComponent<PlayerController>().isPaused = false;
+
+		currentStep = dialogStep.choices[choiceUI.GetComponent<Choice>().choosedInd].target;
+
+		if (currentStep == -1)
+		{
+			currentStep = 0;
+			currentDialog = GetDialog();
+		}
+		currentChar = 0;
+		dialogDisplayText.text = PartialText();
+		Formatting();
+
+		StartCoroutine(CoroutinePartialText());
+		waitingForPlayerChoice = false;
 	}
 }
