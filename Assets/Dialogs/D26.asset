@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0fc4c4a767dd104cae59aa425444ee2, type: 3}
-  m_Name: D21
+  m_Name: D26
   m_EditorClassIdentifier: 
-  unlocalizedName: d21
+  unlocalizedName: d26
   displaySpeedInverse: 0
   conditions:
-  - name: dialog_20
+  - name: dialog_25
     value: 1
-  - name: dialog_21
+  - name: dialog_26
     value: 0
   dialogSteps:
   - text: step0
@@ -41,6 +41,20 @@ MonoBehaviour:
     next: 2
   - text: step2
     feeling: 0
+    player: 0
+    internalThoughts: 0
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices:
+    - name: accept
+      target: 3
+    - name: deny
+      target: 6
+    next: 0
+  - text: step3
+    feeling: 0
     player: 1
     internalThoughts: 0
     sound: {fileID: 0}
@@ -48,22 +62,10 @@ MonoBehaviour:
     variableUpdates: []
     animation: 0
     choices: []
-    next: 3
-  - text: step3
-    feeling: 0
-    player: 0
-    internalThoughts: 0
-    sound: {fileID: 0}
-    delayBeforeDisplay: 0
-    variableUpdates:
-    - name: anxietySet
-      value: 35
-    animation: 0
-    choices: []
     next: 4
   - text: step4
     feeling: 0
-    player: 1
+    player: 0
     internalThoughts: 0
     sound: {fileID: 0}
     delayBeforeDisplay: 0
@@ -78,20 +80,22 @@ MonoBehaviour:
     sound: {fileID: 0}
     delayBeforeDisplay: 0
     variableUpdates:
-    - name: anxietySet
-      value: 40
+    - name: dialog_26
+      value: 1
+    - name: quest_jam
+      value: 1
     animation: 0
     choices: []
-    next: 6
+    next: -1
   - text: step6
     feeling: 0
-    player: 0
+    player: 1
     internalThoughts: 0
     sound: {fileID: 0}
     delayBeforeDisplay: 0
     variableUpdates:
-    - name: anxietySet
-      value: 45
+    - name: step_flour
+      value: 1
     animation: 0
     choices: []
     next: 7
@@ -102,34 +106,8 @@ MonoBehaviour:
     sound: {fileID: 0}
     delayBeforeDisplay: 0
     variableUpdates:
-    - name: anxietySet
-      value: 50
-    animation: 0
-    choices: []
-    next: 8
-  - text: step8
-    feeling: 0
-    player: 0
-    internalThoughts: 0
-    sound: {fileID: 0}
-    delayBeforeDisplay: 0
-    variableUpdates:
-    - name: anxietySet
-      value: 55
-    animation: 0
-    choices: []
-    next: 9
-  - text: step9
-    feeling: 0
-    player: 0
-    internalThoughts: 0
-    sound: {fileID: 0}
-    delayBeforeDisplay: 0
-    variableUpdates:
-    - name: dialog_21
+    - name: dialog_26
       value: 1
-    - name: anxietySet
-      value: 75
     animation: 0
     choices: []
     next: -1
