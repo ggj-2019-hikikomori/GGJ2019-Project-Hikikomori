@@ -15,15 +15,15 @@ MonoBehaviour:
   displaySpeedInverse: 0
   conditions: []
   dialogSteps:
-  - text: tu va prendre cher
+  - text: tu va prendre pas cher
     feeling: 0
     player: 0
     internalThoughts: 0
     sound: {fileID: 0}
     delayBeforeDisplay: 0
     variableUpdates:
-    - name: AnxietySet
-      value: 99
+    - name: anxietyResistance
+      value: 100
     animation: 0
     choices: []
     next: -1
