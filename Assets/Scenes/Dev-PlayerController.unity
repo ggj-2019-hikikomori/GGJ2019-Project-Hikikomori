@@ -118,6 +118,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: bb7af1ff296f4704c85d108c986c7d7c,
     type: 3}
   m_PrefabInternal: {fileID: 760837935}
+--- !u!1 &62321262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 62321263}
+  - component: {fileID: 62321264}
+  m_Layer: 5
+  m_Name: Choices
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &62321263
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 62321262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1836928615}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &62321264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 62321262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 40
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1306,7 @@ Prefab:
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: dialogs.Array.size
-      value: 1
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -1361,19 +1417,221 @@ Prefab:
         type: 2}
       propertyPath: dialogs.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: db0e454614e65cc4da83968ce1d79029,
+      objectReference: {fileID: 11400000, guid: ef2a8f2ce52ad21419d2299fb8a41e26,
         type: 2}
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: dialogs.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 4a9eeebdf8757744ea287caebcf62642,
+      objectReference: {fileID: 11400000, guid: 964497ea5f546cb4a969358d194d1afd,
         type: 2}
     - target: {fileID: 23728138404867548, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: b6948715b730b914ca225122e77d48f3,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e780320ad5054d4aa523218be760979,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f1dce7acabb94c4185348d35c3fed39,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: cfb6dc86af475784886da2c0ca5ce2a1,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: beb71cc78a08cf1438f63ad299638a9b,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: e4381bf3da2f57941bfb4517885c47ce,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 97233eb6fc021ee4f9e954867be8dc71,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7350c7fb61e487f4bb1e35e7e6297314,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a1eb363ccdc150418bcc7ab8f30821c,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0fdcc3fde0ce684abfb7dc501f8b28d,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: d34269a0312bda04fa1935eefee40a64,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: d34269a0312bda04fa1935eefee40a64,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: d34269a0312bda04fa1935eefee40a64,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: d34269a0312bda04fa1935eefee40a64,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: d34269a0312bda04fa1935eefee40a64,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: d34269a0312bda04fa1935eefee40a64,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[19]
+      value: 
+      objectReference: {fileID: 11400000, guid: d34269a0312bda04fa1935eefee40a64,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 86ae03a3af6c7464893605d1a8e332e4,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[20]
+      value: 
+      objectReference: {fileID: 11400000, guid: 86ae03a3af6c7464893605d1a8e332e4,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[21]
+      value: 
+      objectReference: {fileID: 11400000, guid: ef2a8f2ce52ad21419d2299fb8a41e26,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[22]
+      value: 
+      objectReference: {fileID: 11400000, guid: 964497ea5f546cb4a969358d194d1afd,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[23]
+      value: 
+      objectReference: {fileID: 11400000, guid: b6948715b730b914ca225122e77d48f3,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[24]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e780320ad5054d4aa523218be760979,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[25]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f1dce7acabb94c4185348d35c3fed39,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[26]
+      value: 
+      objectReference: {fileID: 11400000, guid: cfb6dc86af475784886da2c0ca5ce2a1,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[27]
+      value: 
+      objectReference: {fileID: 11400000, guid: beb71cc78a08cf1438f63ad299638a9b,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[28]
+      value: 
+      objectReference: {fileID: 11400000, guid: e4381bf3da2f57941bfb4517885c47ce,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[29]
+      value: 
+      objectReference: {fileID: 11400000, guid: 97233eb6fc021ee4f9e954867be8dc71,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[30]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7350c7fb61e487f4bb1e35e7e6297314,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[31]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a1eb363ccdc150418bcc7ab8f30821c,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: dialogs.Array.data[32]
+      value: 
+      objectReference: {fileID: 11400000, guid: f0fdcc3fde0ce684abfb7dc501f8b28d,
+        type: 2}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 1713568540}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: choiceUI
+      value: 
+      objectReference: {fileID: 62321262}
+    - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: choiceButtonPefab
+      value: 
+      objectReference: {fileID: 1594949315004104, guid: 0372a5b4b6d59764ba09bf7f3a4083ef,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b590e6fbac865941b1b1d4cf5a46846, type: 2}
   m_IsPrefabAsset: 0
@@ -1954,6 +2212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90708dc090edd774dafb352475a88c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeOutAnimation: {fileID: 0}
   inside: 0
 --- !u!65 &912927375
 BoxCollider:
@@ -2332,10 +2591,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anxietyBaseLevel: 0
   anxietyLevel: 0
+  anxietyPerSec: 0
+  isHealing: 0
   currentScene: 
   posX: 0
   posY: 0
   posZ: 0
+  item1: {fileID: 0}
+  item2: {fileID: 0}
+  item3: {fileID: 0}
   spawnOnBed: 1
   dialog_empty: {fileID: 11400000, guid: e9220f0b22cb2af43b5922a375890409, type: 2}
   variableUpdateEvent:
@@ -3094,6 +3358,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 500070390}
+  - {fileID: 62321263}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

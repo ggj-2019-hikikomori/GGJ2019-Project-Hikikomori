@@ -3,3 +3,71 @@ dialog.empty.nothing=
 dialog.example.intro=Hey ! Psss..
 dialog.example.question=Do you want some good sprite sa mere ?
 dialog.example.accepted=Hehe, u real ni[b][b]a !
+
+dialog.d04.step0=Eh? Kitty didn't came home last night.
+dialog.d04.step1=It's unusual...
+
+dialog.d05.step0=Do I really wanna go outside?
+dialog.d05.step1=Hmmm... Kitty needs me.
+
+dialog.d06.step0=Oh no, I don't feel good at all.
+
+dialog.d07.step0=The world is so frightening, I'm never gonna make it...
+dialog.d07.step1=I...I don't know what to do...
+dialog.d07.step2.accept=Help Kitty
+dialog.d07.step2.deny=Stay
+dialog.d07.step4.deny=
+
+dialog.d08.step0=Poor Kitty...
+dialog.d08.step1=No, I cannot leave her alone.
+dialog.d08.step2=She needs me... and I need her!
+
+dialog.d09.step0=She is coming back, I can wait until tomorrow.
+
+dialog.d10.step0=Yes, I will wait and search her tomorrow.
+dialog.d10.step1=Yes, let's do that.
+
+dialog.d11.step0=Oh! It's Kitty's favorite toy!
+
+dialog.d12.step0=Oh no, no, no...
+
+dialog.d13.step0=Hello! Are you Kitty's owner?
+dialog.d13.step1=Aaaah !!!
+
+dialog.d14.step0=Geez... I was so scared...
+dialog.d14.step1=I don't think I'm capable of doing it, there are too many people.
+dialog.d14.step2=But Kitty..?
+dialog.d14.step3.accept=Going out
+dialog.d14.step3.deny=Wait
+dialog.d14.step4=This person talked about Kitty, he might be able to help me.
+dialog.d14.step5=I will wait until he leaves and go later.
+dialog.d14.step6=Now he must be gone.
+
+dialog.d16.step0=Sir, are you ok?
+dialog.d16.step1=!!!
+dialog.d16.step2=I wanted to talk to you about Kitty.
+dialog.d16.step3=I saw her this morning, going straight to the bakery.
+dialog.d16.step4=Oh... Uh... Thank you.
+
+dialog.d17.step0=Phew... He was waiting for me!
+dialog.d17.step1=But thanks to him, now I know where to start searching...
+dialog.d17.step2=And I've answered him!
+dialog.d17.step3=Yes, I was able to chat with him.
+dialog.d17.step4=Well, let's start with the bakery...
+dialog.d17.step5=The bakery ?
+dialog.d17.step6=But I don't know where it is!
+dialog.d17.step7=Oh no... I should have asked him...
+dialog.d17.step8=No way. I would have never managed to ask him...
+dialog.d17.step9=Would I...?
+
+dialog.d18.step0=He...hello? Uh... the bakery...? Please...
+dialog.d18.step1=Hello! You're in the wrong direction.
+dialog.d18.step2=You must go in the opposite direction.
+dialog.d18.step3=It's on the left around the bend.
+dialog.d18.step4=Thank you.
+
+dialog.d19.step1=I need to take a break.
+dialog.d19.step1=This place looks peaceful.
+
+dialog.d20.step1=Oh Kitty cat. What have you done?
+
