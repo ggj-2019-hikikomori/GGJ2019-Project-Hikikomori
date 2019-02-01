@@ -56,18 +56,20 @@ public class GameManager : MonoBehaviour
 
 	private void Awake()
 	{
-		if (instance == null)
+		if (instance == null) {
 			instance = this;
-		else if (instance != this)
+			storyVariables = new Dictionary<string, int>();
+			variableUpdateEvent = new StoryVariableEvent();
+			Localization.LoadLanguage("en_US");
+			variableUpdateEvent.AddListener(OnVariableUpdate);
+		} else if (instance != this)
 			Destroy(gameObject);
 
 		DontDestroyOnLoad(this);
 
-		storyVariables = new Dictionary<string, int>();
-		variableUpdateEvent = new StoryVariableEvent();
-		Localization.LoadLanguage("en_US");
-		variableUpdateEvent.AddListener(OnVariableUpdate);
 	}
+
+
 
     public static bool ActionButton()
     {
