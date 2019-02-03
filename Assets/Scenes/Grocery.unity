@@ -2704,22 +2704,22 @@ Prefab:
     - target: {fileID: 65713574760967310, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_Size.x
-      value: 7.348053
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 65713574760967310, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_Center.x
-      value: -1.6740388
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 65713574760967310, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_Center.z
-      value: -1.6233485
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 65713574760967310, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_Size.z
-      value: 7.2467
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -2738,6 +2738,11 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 438a7e618a8d06c4286ff1c82801e6e1,
         type: 2}
+    - target: {fileID: 65713574760967310, guid: 5b590e6fbac865941b1b1d4cf5a46846,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b590e6fbac865941b1b1d4cf5a46846, type: 2}
   m_IsPrefabAsset: 0
@@ -3002,7 +3007,7 @@ Prefab:
     - target: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.4
+      value: -10.33
       objectReference: {fileID: 0}
     - target: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -3138,7 +3143,7 @@ Prefab:
     - target: {fileID: 65713574760967310, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_Center.z
-      value: 0.39120102
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -14231,6 +14236,7 @@ MonoBehaviour:
   flourSprite: {fileID: 21300000, guid: 8588cb49a87f8e549b10d288eea3ccc3, type: 3}
   jamSprite: {fileID: 21300000, guid: f2c5262651406c043b67232e31436053, type: 3}
   seedSprite: {fileID: 21300000, guid: 1dd51b4e1a8fbd34c94482a0640bf635, type: 3}
+  seeds: 0
 --- !u!1001 &1704158931
 Prefab:
   m_ObjectHideFlags: 0

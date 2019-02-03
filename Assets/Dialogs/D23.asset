@@ -16,6 +16,8 @@ MonoBehaviour:
   conditions:
   - name: dialog_22
     value: 1
+  - name: dialog_23
+    value: 0
   - name: item_flour
     value: 0
   dialogSteps:
@@ -25,7 +27,9 @@ MonoBehaviour:
     internalThoughts: 1
     sound: {fileID: 0}
     delayBeforeDisplay: 0
-    variableUpdates: []
+    variableUpdates:
+    - name: dialog_23
+      value: 1
     animation: 0
     choices: []
     next: -1

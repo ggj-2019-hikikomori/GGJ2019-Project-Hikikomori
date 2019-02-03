@@ -1755,7 +1755,7 @@ Prefab:
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: dialogs.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -1770,7 +1770,7 @@ Prefab:
     - target: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -1800,7 +1800,7 @@ Prefab:
     - target: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 224535453335346012, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -1890,7 +1890,7 @@ Prefab:
     - target: {fileID: 65713574760967310, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: m_Center.z
-      value: -0.49946856
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -1917,13 +1917,13 @@ Prefab:
         type: 2}
       propertyPath: dialogs.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: aae789dd21499c34a9adf3dc0409b00e,
+      objectReference: {fileID: 11400000, guid: 0a87edc76f6fe764eac1dffafe3b4d87,
         type: 2}
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
       propertyPath: dialogs.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 0a87edc76f6fe764eac1dffafe3b4d87,
+      objectReference: {fileID: 11400000, guid: e9515c43ba0af7b489885dee50b99528,
         type: 2}
     - target: {fileID: 114624472086912566, guid: 5b590e6fbac865941b1b1d4cf5a46846,
         type: 2}
@@ -5460,7 +5460,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1079696243
 MonoBehaviour:
@@ -5475,6 +5475,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   picker: {fileID: 2111410496}
   baguetteSprite: {fileID: 21300000, guid: 2d6443c45184e58409d32068b55e8acf, type: 3}
+  flourSprite: {fileID: 21300000, guid: 8588cb49a87f8e549b10d288eea3ccc3, type: 3}
+  baguette: 0
 --- !u!1001 &1088667426
 Prefab:
   m_ObjectHideFlags: 0
@@ -7444,7 +7446,7 @@ Transform:
   - {fileID: 394922844}
   - {fileID: 60706744}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1446168122
 GameObject:
@@ -8441,11 +8443,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4770851136753976, guid: e462eab479e66db499d6f9c27efc3093, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.6549644
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 4770851136753976, guid: e462eab479e66db499d6f9c27efc3093, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.7193747
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4770851136753976, guid: e462eab479e66db499d6f9c27efc3093, type: 2}
       propertyPath: m_LocalPosition.z

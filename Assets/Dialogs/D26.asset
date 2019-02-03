@@ -31,7 +31,7 @@ MonoBehaviour:
     next: 1
   - text: step1
     feeling: 0
-    player: 1
+    player: 0
     internalThoughts: 0
     sound: {fileID: 0}
     delayBeforeDisplay: 0

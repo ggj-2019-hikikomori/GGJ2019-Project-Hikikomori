@@ -28,6 +28,8 @@ MonoBehaviour:
     variableUpdates:
     - name: dialog_06
       value: 1
+    - name: anxietySet
+      value: 80
     animation: 0
     choices: []
     next: -1

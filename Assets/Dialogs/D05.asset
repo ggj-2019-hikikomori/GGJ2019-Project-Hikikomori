@@ -34,7 +34,7 @@ MonoBehaviour:
     player: 1
     internalThoughts: 1
     sound: {fileID: 0}
-    delayBeforeDisplay: 0
+    delayBeforeDisplay: 1
     variableUpdates:
     - name: dialog_05
       value: 1

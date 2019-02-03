@@ -7,10 +7,17 @@ public class bakeryPickable : MonoBehaviour
 	public PickManager picker;
 
 	public Sprite baguetteSprite;
+    public Sprite flourSprite;
 
-	void Update()
+    public bool baguette = false;
+
+    void Update()
 	{
-		if (GameManager.GetVariable("item_baguette") == 1)
-			picker.SetSlot(baguetteSprite);
+		if (baguette == false && GameManager.GetVariable("item_baguette") == 1)
+        {
+            picker.EmptySlot(flourSprite);
+            picker.SetSlot(baguetteSprite);
+            baguette = true;
+        }
 	}
 }

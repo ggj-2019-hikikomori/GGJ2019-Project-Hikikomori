@@ -56,4 +56,36 @@ MonoBehaviour:
       value: 1
     animation: 2
     choices: []
+    next: 3
+  - text: step3
+    feeling: 0
+    player: 0
+    internalThoughts: 0
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates:
+    - name: dialog_34
+      value: 1
+    - name: bakery_end
+      value: 1
+    - name: item_baguette
+      value: 1
+    animation: 0
+    choices: []
+    next: 4
+  - text: step4
+    feeling: 0
+    player: 1
+    internalThoughts: 0
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates:
+    - name: dialog_34
+      value: 1
+    - name: bakery_end
+      value: 1
+    - name: item_baguette
+      value: 1
+    animation: 0
+    choices: []
     next: -1

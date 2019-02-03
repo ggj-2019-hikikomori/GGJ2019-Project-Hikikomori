@@ -126,6 +126,8 @@ dialog.d33.step1=Thank, and sorry again.
 dialog.d34.step0=Wow! Thanks a lot, this is too much!
 dialog.d34.step1=I'm sorry I yelled at you.
 dialog.d34.step2=Let me give you this to make amends.
+dialog.d34.step3=Your cat was heading to the school.
+dialog.d34.step4=Thank, and sorry again.
 
 dialog.d35.step0=So, now I know where to go.
 
