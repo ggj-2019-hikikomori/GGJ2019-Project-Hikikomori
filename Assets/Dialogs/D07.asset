@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fc4c4a767dd104cae59aa425444ee2, type: 3}
+  m_Name: D07
+  m_EditorClassIdentifier: 
+  unlocalizedName: d07
+  displaySpeedInverse: 0
+  conditions:
+  - name: dialog_06
+    value: 1
+  - name: dialog_07
+    value: 0
+  dialogSteps:
+  - text: step0
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices: []
+    next: 1
+  - text: step1
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices:
+    - name: accept
+      target: 4
+    - name: deny
+      target: 3
+    next: 4
+  - text: step2
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 1
+    variableUpdates: []
+    animation: 0
+    choices:
+    - name: accept
+      target: 4
+    - name: deny
+      target: 7
+    next: 0
+  - text: step3
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices: []
+    next: 2
+  - text: step4
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices: []
+    next: 5
+  - text: step5
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates: []
+    animation: 0
+    choices: []
+    next: 6
+  - text: step6
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates:
+    - name: dialog_07
+      value: 1
+    animation: 0
+    choices: []
+    next: -1
+  - text: step7
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates:
+    - name: dialog_07
+      value: 1
+    animation: 0
+    choices: []
+    next: 8
+  - text: step8
+    feeling: 0
+    player: 1
+    internalThoughts: 1
+    sound: {fileID: 0}
+    delayBeforeDisplay: 0
+    variableUpdates:
+    - name: dialog_07
+      value: 1
+    animation: 0
+    choices: []
+    next: -1

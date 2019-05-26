@@ -25,15 +25,27 @@ public class AudioManager : MonoBehaviour
 	{
 		source = GetComponent<AudioSource>();
 		lowPass = GetComponent<AudioLowPassFilter>();
-		lastAnxietyLevel = GameManager.instance.anxietyLevel;
-		UpdateAudioParameters();
+
+        if (GameManager.instance != null)
+        {
+            lastAnxietyLevel = GameManager.instance.anxietyLevel;
+            UpdateAudioParameters();
+        }
+        else
+        {
+            lastAnxietyLevel = 0;
+        }
+            
+
+        
 	}
 	
 	void Update ()
 	{
-		if (GameManager.instance.anxietyLevel != lastAnxietyLevel)
+		if (GameManager.instance != null && GameManager.instance.anxietyLevel != lastAnxietyLevel)
 		{
-			lastAnxietyLevel = GameManager.instance.anxietyLevel;
+
+            lastAnxietyLevel = GameManager.instance.anxietyLevel;
 			UpdateAudioParameters();
 		}
 	}

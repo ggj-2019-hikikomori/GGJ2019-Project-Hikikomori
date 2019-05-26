@@ -3,3 +3,145 @@ dialog.empty.nothing=
 dialog.example.intro=Hey ! Psss..
 dialog.example.question=Do you want some good sprite sa mere ?
 dialog.example.accepted=Hehe, u real ni[b][b]a !
+
+dialog.d04.step0=Eh? Kitty didn't came home last night.
+dialog.d04.step1=It's unusual...
+
+dialog.d05.step0=Do I really wanna go outside?
+dialog.d05.step1=Hmmm... Kitty needs me.
+
+dialog.d06.step0=Oh no, I don't feel good at all.
+
+dialog.d07.step0=The world is so frightening, I'm never gonna make it...
+dialog.d07.step1=I...I don't know what to do...
+dialog.d07.step1.accept=Help Kitty
+dialog.d07.step1.deny=Stay
+dialog.d07.step2=Do I go now?
+dialog.d07.step2.accept=Help Kitty
+dialog.d07.step2.deny=Stay
+dialog.d07.step3=She is coming back, I can wait until tomorrow.
+dialog.d07.step4=Poor Kitty...
+dialog.d07.step5=No, I cannot leave her alone.
+dialog.d07.step6=She needs me... and I need her!
+dialog.d07.step7=I will wait and search for her tomorrow.
+dialog.d07.step8=Yes, let's do that.
+
+dialog.d11.step0=Oh! It's Kitty's favorite toy!
+
+dialog.d12.step0=Oh no, no, no...
+
+dialog.d13.step0=Hello! Are you Kitty's owner?
+dialog.d13.step1=Aaaah !!!
+
+dialog.d14.step0=Geez... I was so scared...
+dialog.d14.step1=I don't think I'm capable of doing it, there are too many people.
+dialog.d14.step2=But Kitty..?
+dialog.d14.step2.accept=Going out
+dialog.d14.step2.deny=Wait
+dialog.d14.step3=This person talked about Kitty, he might be able to help me.
+dialog.d14.step4=I will wait until he leaves and go later.
+dialog.d14.step5=Now he must be gone.
+
+dialog.d16.step0=Sir, are you ok?
+dialog.d16.step1=!!!
+dialog.d16.step2=I wanted to talk to you about Kitty.
+dialog.d16.step3=I saw her this morning, going straight to the bakery.
+dialog.d16.step4=Oh... Uh... Thank you.
+
+dialog.d17.step0=Phew... He was waiting for me!
+dialog.d17.step1=But thanks to him, now I know where to start searching...
+dialog.d17.step2=And I've answered him!
+dialog.d17.step3=Yes, I was able to chat with him.
+dialog.d17.step4=Well, let's start with the bakery...
+dialog.d17.step5=The bakery ?
+dialog.d17.step6=But I don't know where it is!
+dialog.d17.step7=Oh no... I should have asked him...
+dialog.d17.step8=No way. I would have never managed to ask him...
+dialog.d17.step9=Would I...?
+
+dialog.d18.step0=He...hello? Uh... the bakery...? Please...
+dialog.d18.step1=Hello! You're in the wrong direction.
+dialog.d18.step2=You must go in the opposite direction.
+dialog.d18.step3=It's on the left around the bend.
+dialog.d18.step4=Thank you.
+
+dialog.d19.step0=I need to take a break.
+dialog.d19.step1=This place looks peaceful.
+
+dialog.d20.step0=Oh Kitty cat. What have you done?
+
+dialog.d21.step0=Hello !
+dialog.d21.step1=Oh uh, hello.
+dialog.d21.step2=Did you see a cat... uh, a white cat... wandering around?
+dialog.d21.step3=AH! So YOU are the owner of that blasted cat?
+dialog.d21.step4=!!!
+dialog.d21.step5=It devasted my bakery by spilling a big flour bag this morning!
+dialog.d21.step6=You have to pay for that scamp!
+dialog.d21.step7=Or I'll never tell you where it went.
+dialog.d21.step8=I needed this flour, get me one bag.
+dialog.d21.step9=And I may tell you everything.
+
+dialog.d22.step0=Damn... Kitty is really up to mischief.
+dialog.d22.step1=This man was very angry.
+dialog.d22.step2=I need to fix this so he tells me where Kitty went.
+
+dialog.d23.step0=I need some flour to fix Kitty's mistake.
+
+dialog.d24.step0=Go on! You almost got it.
+
+dialog.d25.step0=Hello!
+dialog.d25.step1=Hello
+
+dialog.d26.step0=Hello young man,
+dialog.d26.step1=Could you please help me shopping? 
+dialog.d26.step2=I don't have too many things to buy but my eyes are not so sharp anymore.
+dialog.d26.step2.accept=Help the old man
+dialog.d26.step2.deny=Don't help the old man
+dialog.d26.step3=Uh... Yes I can help you.
+dialog.d26.step4=Thank you very much young man.
+dialog.d26.step5=I'm looking for a jar of jam please.
+dialog.d26.step6=I'm sorry. Uh... I'm busy.
+dialog.d26.step7=Oh, I see. I understand...
+
+dialog.d28.step0=Here is your jam Sir.
+dialog.d28.step1=Thank you so much!
+dialog.d28.step2=Take these seeds as a thank you.
+
+dialog.d29.step0=So, which bag size will I take?
+dialog.d29.step0.big=Big
+dialog.d29.step0.small=Small
+dialog.d29.step1=The big one.
+dialog.d29.step2=The small one.
+
+dialog.d30.step0=Kitty's favorite food! She will be so happy!
+
+dialog.d31.step0=Thank you for your purchases ! Have a nice day.
+dialog.d31.step1=Have a nice day too.
+
+dialog.d32.step0=Well, that takes care of that.
+
+dialog.d33.step0=Thank, your cat was heading to the school.
+dialog.d33.step1=Thank, and sorry again.
+
+dialog.d34.step0=Wow! Thanks a lot, this is too much!
+dialog.d34.step1=I'm sorry I yelled at you.
+dialog.d34.step2=Let me give you this to make amends.
+dialog.d34.step3=Your cat was heading to the school.
+dialog.d34.step4=Thank, and sorry again.
+
+dialog.d35.step0=So, now I know where to go.
+
+dialog.d36.step0=I am very glad!
+dialog.d36.step1=This baker was really nice after all.
+dialog.d36.step2=This baguette smells very good, I will come shop here in the future.
+
+dialog.d37.step0=This white cat in the park was so cute!
+
+dialog.d38.step0=Yes, he was so fluffy!
+
+dialog.d39.step0=Nice, Kitty is ok!
+dialog.d39.step1=I just need to find the entrance of the park.
+
+dialog.d40.step0=Kitty!!! Here you are!
+dialog.d40.step1=Oh I am so happy I found you.
+dialog.d40.step2=Let's go back home.

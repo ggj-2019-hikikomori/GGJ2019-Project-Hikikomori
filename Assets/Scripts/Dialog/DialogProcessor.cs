@@ -92,8 +92,13 @@ public class DialogProcessor : MonoBehaviour {
 	{
 		if (other.CompareTag("Player"))
 		{
+			currentDialog = GetDialog();
 			EnableDispay();
-			other.GetComponent<PlayerController>().isPaused = true;
+			if (currentDialog != GameManager.instance.dialog_empty)
+			{
+				other.GetComponent<PlayerController>().isPaused = true;
+			}
+
 		}
 	}
 
@@ -134,7 +139,8 @@ public class DialogProcessor : MonoBehaviour {
 						{
 							currentStep = 0;
 							currentDialog = GetDialog();
-							player.GetComponent<PlayerController>().isPaused = false;
+							if(currentDialog == GameManager.instance.dialog_empty)
+								player.GetComponent<PlayerController>().isPaused = false;
 						}
 						currentChar = 0;
 						dialogDisplayText.text = PartialText();
@@ -285,7 +291,8 @@ public class DialogProcessor : MonoBehaviour {
 		{
 			currentStep = 0;
 			currentDialog = GetDialog();
-			player.GetComponent<PlayerController>().isPaused = false;
+			if (currentDialog == GameManager.instance.dialog_empty)
+				player.GetComponent<PlayerController>().isPaused = false;
 		}
 
 		currentChar = 0;

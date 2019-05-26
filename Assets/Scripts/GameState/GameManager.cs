@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour
 	[System.Serializable]
 	public struct StoryVariable
 	{
+
+		public StoryVariable(string n, int v)
+		{
+			name = n;
+			value = v;
+		}
 		public string name;
 		public int value;
 	}
@@ -46,21 +52,24 @@ public class GameManager : MonoBehaviour
 	#endregion
 
 	public StoryVariableEvent variableUpdateEvent;
+	public bool isPaused;
 
 	private void Awake()
 	{
-		if (instance == null)
+		if (instance == null) {
 			instance = this;
-		else if (instance != this)
+			storyVariables = new Dictionary<string, int>();
+			variableUpdateEvent = new StoryVariableEvent();
+			Localization.LoadLanguage("en_US");
+			variableUpdateEvent.AddListener(OnVariableUpdate);
+		} else if (instance != this)
 			Destroy(gameObject);
 
 		DontDestroyOnLoad(this);
 
-		storyVariables = new Dictionary<string, int>();
-		variableUpdateEvent = new StoryVariableEvent();
-		Localization.LoadLanguage("fr_FR");
-		variableUpdateEvent.AddListener(OnVariableUpdate);
 	}
+
+
 
     public static bool ActionButton()
     {
@@ -89,6 +98,6 @@ public class GameManager : MonoBehaviour
 	public void OnVariableUpdate(StoryVariable variable)
 	{
 		if (variable.name.Equals("anxietySet"))
-			anxietyLevel += variable.value;
+			anxietyLevel = variable.value;
 	}
 }
